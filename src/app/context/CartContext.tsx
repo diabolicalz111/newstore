@@ -8,7 +8,7 @@ interface CartItem {
   price: number;
   image: string;
   quantity: number;
-  priceId: string; // Make priceId a required property
+  priceId: string; // Ensure priceId is required
 }
 
 interface CartContextType {
