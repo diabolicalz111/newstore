@@ -36,7 +36,7 @@ export default function CheckoutPage() {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           items: cart.map((item) => ({
-            price: item.priceId, // Ensure priceId matches your Stripe price IDs
+            price: item.priceId || "", // Ensure priceId is included
             quantity: item.quantity,
           })),
         }),
