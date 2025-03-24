@@ -174,7 +174,8 @@ export default function ProductDetail({ params }: { params: { id: string } }) {
       name: product.name,
       price: product.price,
       image: product.image,
-      quantity: quantity
+      quantity: quantity,
+      priceId: product.priceId || "", // Ensure priceId is included
     });
 
     alert('Product added to cart!');
