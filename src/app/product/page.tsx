@@ -33,7 +33,7 @@ export default function ProductPage() {
             name: "Sample Product",
             price: 100,
             image: "/images/sample-product.jpg",
-            priceId: "price_12345",
+            priceId: "price_12345", // Ensure priceId is included
           })
         }
         className="bg-yellow-500 text-black px-6 py-3 rounded-lg font-bold"
