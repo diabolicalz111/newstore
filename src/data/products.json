@@ -1,0 +1,120 @@
+{
+  "gold": [
+    {
+      "id": 101,
+      "image": "gold1.jpg",
+      "title": "Savage Heart Pendant and Chain 20\"",
+      "description": "Discover the Savage Heart pendant and chain - a uniquely designed piece that offers a versatile length of 20 inches. Elevate your style effortlessly with this stunning accessory."
+    },
+    {
+      "id": 102,
+      "image": "gold2.jpg",
+      "title": "King Pendant and Chain 20\"",
+      "description": "Unleash your inner royalty with our King pendant and chain, featuring a majestic royal design fit for kings and queens. The adjustable length adds versatility to your style, ensuring a perfect fit for every occasion. Elevate your look with this regal accessory today!"
+    },
+    {
+      "id": 103,
+      "image": "gold3.jpg",
+      "title": "Hustle Pendant and Chain 20\"",
+      "description": "Elevate your style with our Hustle pendant and chain. Crafted from high-quality materials, this versatile accessory is perfect for adding a touch of commotion to any outfit."
+    },
+    {
+      "id": 104,
+      "image": "gold4.jpg",
+      "title": "Cross Pendant and Chain 20\"",
+      "description": "Elevate your style with our stunning cross pendant and chain, designed to add a touch of elegance to any outfit. With a 20\" adjustable length, you can customize it to suit your look perfectly. Embrace timeless beauty and make a fashion statement with this stylish accessory!"
+    },
+    {
+      "id": 105,
+      "image": "gold5.jpg",
+      "title": "Diamond Crown Pendant and Chain 20\"",
+      "description": "Experience the epitome of luxury with our stunning Iced Out Diamond Crown Pendant and Chain. Adorned with sparkling diamonds, this stylish accessory is the perfect statement piece to elevate your look. Indulge in sophistication and elegance with this exquisite 20\" pendant and chain."
+    },
+    {
+      "id": 106,
+      "image": "gold6.jpg",
+      "title": "Pikachu Gold Pendant and Chain 20\"",
+      "description": "Discover the charm of our Pikachu gold pendant and chain, a must-have for all Pokemon fans. With its adorable design and high-quality craftsmanship, this 20\" accessory is the perfect way to showcase your love for the iconic character. Add a touch of Pokemon magic to your style today!"
+    },
+    {
+      "id": 107,
+      "image": "gold7.jpg",
+      "title": "Gun Pendant and Chain 20\"",
+      "description": "Discover the allure of our Gold Gun pendant and chain set. Elevate your style with this stylish accessory that adds a touch of sophistication to any outfit."
+    },
+    {
+      "id": 108,
+      "image": "gold8.jpg",
+      "title": "Gold Chain 23\" and Bracelet 8\"",
+      "description": "Discover the epitome of elegance with this exquisite 23\" gold chain and 8\" bracelet set. Crafted with a versatile design, this set effortlessly complements any outfit, adding a touch of sophistication to your look."
+    },
+    {
+      "id": 109,
+      "image": "gold9.jpg",
+      "title": "Ruby Red Pendant and Chain 20\"",
+      "description": "Indulge in the elegance of our Ruby Red Pendant and Chain, featuring a vibrant color that is sure to captivate. With an adjustable length of 20 inches, this stunning piece offers both style and versatility for any occasion. Elevate your look with this exquisite accessory today!"
+    }
+  ],
+  "silver": [
+    {
+      "id": 200,
+      "image": "silver1.jpg",
+      "title": "Marijuana Pendant & Chain 20\"",
+      "description": "Elevate your style with this marijuana pendant on a 20-inch chain. Featuring a sleek design, it's the perfect combination of boldness and cool, making it a standout accessory."
+    },
+    {
+      "id": 201,
+      "image": "silver2.jpg",
+      "title": "“No Love” Pendant & Chain 20\"",
+      "description": "Make a statement with the 'No Love' pendant & chain. Bold and edgy, this piece features sharp detailing and a sleek design, perfect for adding attitude and style to any outfit."
+    },
+    {
+      "id": 202,
+      "image": "silver3.jpg",
+      "title": "Heartbreaker Pendant & Chain 20\"",
+      "description": "Turn heads with the iced-out Heartbreaker pendant & chain. Sparkling, bold and luxurious shine, perfect for adding an edgy touch to your style."
+    },
+    {
+      "id": 203,
+      "image": "silver4.jpg",
+      "title": "“Savage” Pendant & Chain 20\"",
+      "description": "Unleash your inner savage with this iced-out pendant & chain. It delivers bold, standout style with a touch of rebel."
+    },
+    {
+      "id": 204,
+      "image": "silver5.jpg",
+      "title": "Cross Pendant & Chain 20\"",
+      "description": "Add a timeless touch to your style with this cross pendant & chain. Crafted with sleek detail, it’s a bold yet classic accessory for any look."
+    },
+    {
+      "id": 205,
+      "image": "silver6.jpg",
+      "title": "AK-47 Pendant & Chain 20\"",
+      "description": "Make a bold statement with this iced-out AK-47 pendant & chain. Featuring intricate detailing, this piece combines street edge with luxury shine, perfect for adding standout style to any look."
+    },
+    {
+      "id": 206,
+      "image": "silver7.jpg",
+      "title": "Chain 23\" & Bracelet Set",
+      "description": "Discover the epitome of elegance with this stunning 23\" silver necklace and 8\" bracelet set. Designed to perfection, this matching set exudes sophistication and style, making it the perfect choice for those who appreciate fine craftsmanship."
+    },
+    {
+      "id": 207,
+      "image": "silver8.jpg",
+      "title": "Iced Out “GOAT” Pendant & Chain 20\"",
+      "description": "Show your greatness with the GOAT pendant on a 20-inch chain. This piece is designed to make a statement and highlight your legendary style."
+    },
+    {
+      "id": 208,
+      "image": "silver9.jpg",
+      "title": "Playaz Club Pendant & Chain 20\"",
+      "description": "Rep the Playaz Club with this bold pendant and chain. Designed to make a statement, it combines edgy street style with a touch of luxury, perfect for those who live life on their own terms."
+    },
+    {
+      "id": 209,
+      "image": "silver10.jpg",
+      "title": "GOAT Pendant & Chain 20\"",
+      "description": "Elevate your style with our dainty goat pendant and chain. Featuring an adjustable 20\" length, this piece is perfect for adding a touch of charm to any outfit."
+    }
+  ]
+}

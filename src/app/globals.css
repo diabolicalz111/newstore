@@ -1,0 +1,2314 @@
+/* Vault Container */
+.vault-container {
+  display: flex;
+  justify-content: center; /* Center the vaults horizontally */
+  align-items: flex-end; /* Align vaults to the bottom */
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  position: absolute;
+  bottom: -7cm; /* Adjusted from -15cm to -7cm to move 8cm up */
+  transform: translateY(0); /* Remove vertical centering */
+  z-index: 200; /* Ensure the vaults are above the hero-background */
+}
+
+/* Individual Vault */
+.vault {
+  width: 100%; /* Make each vault take full width */
+  display: flex;
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
+  text-align: center;
+  padding: 10px 0; /* Add vertical spacing between vaults */
+  background: none; /* Ensure no background */
+  border: none; /* Remove border */
+  box-shadow: none; /* Remove shadow */
+}
+
+.vault:hover {
+  transform: none; /* Remove scaling effect */
+}
+
+.vault.gold,
+.vault.silver {
+  box-shadow: none; /* Remove shadow */
+  border: none; /* Remove border */
+  background: none; /* Remove background */
+  align-items: center; /* Center content horizontally */
+}
+
+.vault.gold .vault-header,
+.vault.silver .vault-header {
+  text-shadow: none; /* Remove text shadow */
+}
+
+.vault.gold .vault-image,
+.vault.silver .vault-image {
+  box-shadow: none; /* Remove image shadow */
+  border-radius: 0; /* Remove rounded corners */
+  transform: none; /* Remove any transformations */
+  transition: none; /* Remove transition effects */
+}
+
+.vault-button.gold,
+.vault-button.silver {
+  border-color: transparent; /* Remove button border color */
+  box-shadow: none; /* Remove button shadow */
+  transform: none; /* Remove scaling effect */
+  transition: none; /* Remove transition effects */
+}
+
+.vault-button.gold:hover,
+.vault-button.silver:hover {
+  transform: none; /* Remove hover scaling effect */
+  box-shadow: none; /* Remove hover shadow */
+}
+
+/* Vault Headers */
+.vault-header {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-align: center;
+  /* Removed text-shadow */
+  position: static; /* Remove absolute positioning */
+  top: auto; /* Reset top positioning */
+  left: auto; /* Reset left positioning */
+  transform: none; /* Reset transform */
+  z-index: 10; /* Ensure it appears above other content */
+  text-shadow: none; /* Remove text shadow */
+  margin-top: -4cm; /* Move the text up by 1cm from the current position */
+}
+
+.vault.gold .vault-header {
+  color: gold;
+  text-shadow: none; /* Remove text shadow */
+}
+
+.vault.silver .vault-header {
+  color: silver;
+  text-shadow: none; /* Remove text shadow */
+}
+
+/* Smoky Dark Background */
+.bg-dark-smoky {
+  background-color: #1a1a1a;
+  background-image: radial-gradient(circle, rgba(0, 0, 0, 0.5) 0%, transparent 70%);
+  color: white; /* Ensure text is readable */
+}
+
+/* Vault Buttons */
+.vault-button {
+  padding: 15px 30px;
+  font-size: 18px;
+  font-weight: bold;
+  border: 2px solid white; /* Restore white border */
+  border-radius: 8px; /* Restore rectangular shape */
+  background-color: transparent; /* Remove radial gradient */
+  color: white;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.vault-button:hover {
+  transform: scale(1.1);
+}
+
+.vault-button.gold {
+  border-color: gold; /* Restore gold border */
+}
+
+.vault-button.silver {
+  border-color: silver; /* Restore silver border */
+}
+
+/* Featured Products Section */
+.featured-products {
+  text-align: center;
+  padding: 20px;
+  transform: translateZ(0); /* Ensure it appears in 3D space */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5); /* Add shadow for 3D effect */
+}
+
+/* Custom Font */
+.font-cinzel {
+  font-family: 'Cinzel', serif;
+}
+
+/* Hip-Hop Font */
+.hip-hop-font {
+  font-family: 'Cinzel', serif; /* Replace with a hip-hop font if available */
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+/* Glowing Effect */
+.glow {
+  /* Removed box-shadow styles */
+}
+
+.glow:hover {
+  /* Removed hover box-shadow styles */
+}
+
+/* Smooth Fade-In */
+.fade-in {
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Fullscreen Video */
+.fullscreen-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw; /* Ensure it spans the full viewport width */
+  height: 100vh; /* Ensure it spans the full viewport height */
+  object-fit: cover; /* Maintain aspect ratio while covering the screen */
+  z-index: -1; /* Place it behind other content */
+  background-size: cover; /* Ensure the image covers the entire screen */
+  background-position: center; /* Center the background image */
+  background-repeat: no-repeat; /* Prevent the image from repeating */
+}
+
+/* Navigation Bar */
+.nav-bar {
+  background-color: transparent; /* Make the navigation bar transparent */
+  border-bottom: none; /* Remove the border for a cleaner look */
+  box-shadow: none; /* Remove shadow to blend with the hero background */
+  position: absolute; /* Position it over the hero background */
+  top: 1cm; /* Move the navigation bar up by 1 cm (from 2cm to 1cm) */
+  display: flex;
+  justify-content: space-between; /* Separate left and right groups */
+  align-items: center; /* Vertically align items */
+  padding: 0 20px; /* Add padding for spacing */
+}
+
+.transparent-nav {
+  background: transparent; /* Ensure full transparency */
+}
+
+.nav-item {
+  list-style: none;
+}
+
+.nav-link {
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: white; /* Set font color to white */
+  text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black; /* Add black outline */
+  text-decoration: none;
+  transition: color 0.3s ease;
+  padding: 10px 20px; /* Add spacing between links */
+  display: inline-block;
+  text-align: center; /* Ensure horizontal alignment */
+}
+
+.nav-link:hover {
+  color: gold; /* Change color on hover */
+}
+
+/* Ensure horizontal alignment */
+.nav-bar ul {
+  display: flex;
+  flex-direction: row; /* Align items horizontally */
+  gap: 20px; /* Add spacing between items */
+}
+
+.nav-left {
+  display: flex;
+  gap: 20px; /* Add spacing between left-aligned items */
+}
+
+.nav-right {
+  display: flex;
+  gap: 20px; /* Add spacing between right-aligned items */
+  margin-right: 8cm; /* Move the "Search" and "Cart" tabs 8 cm to the right */
+  transform: translateX(18cm); /* Move the "Search" and "Cart" tabs 18 cm to the right (14cm + 4cm) */
+}
+
+/* Title Container */
+.title-container {
+  position: fixed;
+  top: 50%; /* Center vertically */
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Perfect centering */
+  z-index: 100; /* Ensure it is above other elements */
+  text-align: center;
+  width: auto; /* Remove fixed width for flexibility */
+  height: auto; /* Remove fixed height for flexibility */
+  background: none; /* Remove skull background */
+  opacity: 1; /* Restore full opacity */
+  perspective: 1000px; /* Add perspective for 3D effect */
+  z-index: 300; /* Ensure the title is above the hero-background */
+}
+
+.business-title {
+  font-family: 'Cinzel', serif;
+  font-size: 56px; /* Increased size for prominence */
+  font-weight: 1100; /* Increased boldness */
+  text-transform: uppercase;
+  background: linear-gradient(to right, gold, silver); /* Gradient gold chrome effect */
+  -webkit-background-clip: text; /* Clip gradient to text */
+  -webkit-text-fill-color: transparent; /* Make gradient visible */
+  text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.7); /* Stronger shadow for depth */
+  position: relative;
+  display: inline-block;
+  transform: rotateX(10deg); /* Slight tilt for 3D effect */
+  font-weight: 900; /* Make the text extra bold */
+  color: black; /* Restore text color to black */
+  text-align: left; /* Restore default alignment */
+  text-shadow: none; /* Remove any shadow */
+}
+
+.hanging-jewellery {
+  display: block;
+  font-size: 36px; /* Slightly smaller than "DIABOLICAL" */
+  font-weight: 1100; /* Increased boldness */
+  background: linear-gradient(to right, gold, silver); /* Gradient gold chrome effect */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.7); /* Stronger shadow for depth */
+  position: relative;
+  text-transform: uppercase;
+  transform: rotateX(10deg); /* Match the tilt of the main title */
+  font-weight: 900; /* Make the text extra bold */
+  color: black; /* Restore text color to black */
+  text-align: left; /* Restore default alignment */
+  text-shadow: none; /* Remove any shadow */
+}
+
+.hanging-jewellery::before {
+  /* Remove the chain connecting to "DIABOLICAL" */
+  content: none;
+}
+
+.fullscreen-video,
+.hero-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw; /* Ensure it spans the full viewport width */
+  height: 100vh; /* Ensure it spans the full viewport height */
+  object-fit: cover; /* Maintain aspect ratio while covering the screen */
+  z-index: -1; /* Place it behind other content */
+  background-size: cover; /* Ensure the image covers the entire screen */
+  background-position: center; /* Center the background image */
+  background-repeat: no-repeat; /* Prevent the image from repeating */
+}
+
+.section {
+  height: 100vh; /* Ensure all sections are full screen height */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px; /* Add consistent padding */
+  box-sizing: border-box; /* Include padding in height calculation */
+}
+
+.hero-section {
+  background: transparent; /* Keep the hero section transparent */
+  height: 100vh; /* Full screen height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.about-section {
+  display: flex;
+  flex-direction: column; /* Stack items vertically on small screens */
+  gap: 20px; /* Add spacing between text and video */
+  align-items: center;
+  justify-content: center;
+  text-align: left;
+  background-image: url("/images/about-us-background.jpg"); /* Set only the background image */
+  background-size: cover; /* Ensure the image covers the entire section */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Prevent the image from repeating */
+  background-attachment: fixed; /* Create a parallax effect */
+  color: white; /* Ensure text is readable over the image */
+  padding: 40px; /* Add padding for spacing */
+  border-radius: 8px; /* Optional: Add rounded corners for a polished look */
+}
+
+@media (min-width: 768px) {
+  .about-section {
+    flex-direction: column; /* Ensure vertical stacking on larger screens as well */
+  }
+}
+
+.about-text {
+  max-width: 600px; /* Limit the width of the text */
+  margin-bottom: 20px; /* Add spacing between text and video */
+  margin-top: -3cm; /* Move the text 3cm up */
+  background: rgba(0, 0, 0, 0.6); /* Add a semi-transparent background for readability */
+  padding: 20px; /* Add padding around the text */
+  border-radius: 8px; /* Add rounded corners for a polished look */
+}
+
+.about-video {
+  width: 100%;
+  max-width: 400px; /* Limit the width of the video */
+}
+
+.about-video video {
+  border-radius: 8px; /* Add rounded corners to the video */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Add shadow for a polished look */
+}
+
+.contact-section {
+  background: #333; /* Slightly lighter dark background for the contact section */
+  color: white; /* Ensure text is readable */
+  padding: 40px 20px; /* Add padding for spacing */
+  text-align: center; /* Center-align text */
+}
+
+.new-section {
+  background-color: #f8f8f8; /* Light background for contrast */
+  color: #333; /* Dark text for readability */
+  padding: 40px 20px; /* Add padding for spacing */
+  text-align: center; /* Center-align text */
+}
+
+.skull-container {
+  position: fixed;
+  top: 2cm; /* Position 2cm down */
+  left: 1cm; /* Adjusted from 11cm to move 10cm to the left */
+  width: 80px;
+  height: 80px;
+  z-index: 1000;
+}
+
+.skull-link {
+  display: inline-block;
+  text-decoration: none;
+}
+
+.skull-wrapper {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%; /* Make the skull rounded */
+  overflow: hidden;
+  background: transparent; /* Ensure the background is transparent */
+  box-shadow: 0 0 15px 5px rgba(255, 215, 0, 0.6); /* Glow effect */
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.skull-wrapper:hover {
+  box-shadow: 0 0 25px 10px rgba(255, 215, 0, 0.8); /* Intensify glow on hover */
+  transform: scale(1.1); /* Slightly enlarge on hover */
+}
+
+.skull-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* Ensure the skull fits properly */
+  background: transparent; /* Ensure the image background is transparent */
+}
+
+.skull-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: white;
+  text-shadow: 0 0 5px gold, 0 0 10px gold, 0 0 15px gold;
+  pointer-events: none; /* Ensure the text does not interfere with clicks */
+}
+
+.skull-link:hover .skull-image {
+  filter: brightness(1.2);
+  transform: scale(1.1);
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.skull-link:hover .skull-text {
+  text-shadow: 0 0 10px gold, 0 0 20px gold, 0 0 30px gold;
+}
+
+.hero-integrated {
+  position: absolute;
+  top: 50%; /* Center vertically in the hero background */
+  left: 50%; /* Center horizontally in the hero background */
+  transform: translate(-50%, -50%); /* Perfect centering */
+  z-index: 300; /* Ensure it appears above the hero background */
+}
+
+.vertical-text {
+  position: absolute;
+  top: 100%; /* Position below the skull */
+  left: 50%;
+  transform: translate(-50%, 0) rotate(90deg); /* Rotate text vertically */
+  font-size: 16px; /* Make the text larger */
+  font-weight: 900; /* Make the text bolder */
+  color: white;
+  text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black; /* Add black outline */
+  text-transform: uppercase;
+  pointer-events: none; /* Ensure the text does not interfere with clicks */
+}
+
+.business-logo {
+  width: 300px; /* Adjust size as needed */
+  height: auto; /* Maintain aspect ratio */
+  object-fit: contain; /* Ensure the logo fits properly */
+  display: block;
+  margin: 0 auto; /* Center the logo */
+}
+
+.about-section {
+  display: flex;
+  flex-direction: column; /* Stack items vertically on small screens */
+  gap: 20px; /* Add spacing between text and video */
+  align-items: center;
+  justify-content: center;
+  text-align: left;
+  background-image: url("/images/about-us-background.jpg"); /* Set only the background image */
+  background-size: cover; /* Ensure the image covers the entire section */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Prevent the image from repeating */
+  background-attachment: fixed; /* Create a parallax effect */
+  color: white; /* Ensure text is readable over the image */
+  padding: 40px; /* Add padding for spacing */
+  border-radius: 8px; /* Optional: Add rounded corners for a polished look */
+}
+
+@media (min-width: 768px) {
+  .about-section {
+    flex-direction: column; /* Ensure vertical stacking on larger screens as well */
+  }
+}
+
+.about-text {
+  max-width: 600px; /* Limit the width of the text */
+  margin-bottom: 20px; /* Add spacing between text and video */
+  margin-top: -3cm; /* Move the text 3cm up */
+  background: rgba(0, 0, 0, 0.6); /* Add a semi-transparent background for readability */
+  padding: 20px; /* Add padding around the text */
+  border-radius: 8px; /* Add rounded corners for a polished look */
+}
+
+.about-text h2,
+.about-text p {
+  background: linear-gradient(to right, gold, silver); /* Gradient gold-silver effect */
+  -webkit-background-clip: text; /* Clip gradient to text */
+  -webkit-text-fill-color: transparent; /* Make gradient visible */
+  text-shadow: none; /* Remove any text shadow */
+}
+
+.about-video {
+  width: 100%;
+  max-width: 400px; /* Limit the width of the video */
+}
+
+.about-video video {
+  border-radius: 8px; /* Add rounded corners to the video */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, .3); /* Add shadow for a polished look */
+}
+
+/* Smoke Animation */
+@keyframes smoke {
+  0% {
+    opacity: 0.3;
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    opacity: 0.5;
+    transform: translateY(-20px) scale(1.1);
+  }
+  100% {
+    opacity: 0.3;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.smoke-effect {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none; /* Ensure it doesn't interfere with user interactions */
+  background: url("/images/smoke.png") repeat; /* Add a smoke texture image */
+  opacity: 0.3; /* Initial opacity */
+  animation: smoke 5s infinite ease-in-out; /* Apply the smoke animation */
+  z-index: -1; /* Place it behind other content */
+}
+
+.free-shipping-banner {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%; /* Full width */
+  text-align: center; /* Center the text */
+  background: rgba(0, 0, 0, 0.5); /* Transparent black background */
+  color: gold; /* Gold text color */
+  font-family: 'Cinzel', serif; /* Use the Cinzel font */
+  font-size: 18px; /* Font size */
+  font-weight: bold; /* Bold text */
+  text-transform: uppercase; /* Uppercase text */
+  padding: 10px 0; /* Padding for spacing */
+  z-index: 1000; /* Ensure it appears above all other elements */
+  box-shadow: 0 0 10px gold; /* Glowing effect */
+  animation: glow 1.5s infinite alternate; /* Glowing animation */
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 5px gold, 0 0 10px gold, 0 0 15px gold;
+  }
+  to {
+    text-shadow: 0 0 10px gold, 0 0 20px gold, 0 0 30px gold;
+  }
+}
+
+.gold-products-page {
+  padding: 20px;
+  text-align: center;
+  background-color: #1a1a1a; /* Dark smoky background */
+  background-image: radial-gradient(circle, rgba(0, 0, 0, 0.5) 0%, transparent 70%);
+  color: white; /* Ensure text is readable */
+  min-height: 100vh; /* Ensure the page covers the full viewport height */
+}
+
+.gold-product img {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gold-product img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.slider-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  gap: 20px;
+  padding: 20px;
+}
+
+.slider {
+  display: flex;
+  gap: 20px;
+}
+
+.slider-item {
+  flex: 0 0 auto;
+  scroll-snap-align: center;
+  text-align: center;
+}
+
+.product-image {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  margin-top: 5cm; /* Increased from 4cm to 5cm */
+}
+
+.product-overlay {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.gold-product:hover .product-overlay {
+  opacity: 1;
+}
+
+.gallery-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.gallery-item {
+  text-align: center;
+}
+
+.product-image {
+  max-width: 500px;
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  margin-top: 5cm; /* Increased from 4cm to 5cm */
+}
+
+.product-overlay {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.gold-product:hover .product-overlay {
+  opacity: 1;
+}
+
+.gallery-container .gallery-item:nth-last-child(-n+4) .product-image {
+  margin-top: 0; /* Reset the margin-top for the last four images */
+  transform: translateY(-3cm); /* Move the last four images up by 3 cm */
+}
+
+.gallery-container .gallery-item:nth-last-child(-n+4) .product-image {
+  margin-top: 2cm; /* Move the last four images down by 2 cm */
+  transform: translateY(0); /* Reset any previous upward movement */
+}
+
+/* Remove specific styles for gold5 */
+.gallery-container .gallery-item:nth-child(5) .product-image {
+  transform: none; /* Reset transformation */
+}
+
+.gallery-container .gallery-item:nth-child(5) .product-overlay {
+  transform: none; /* Reset transformation */
+}
+
+/* Remove specific styles for gold6, gold7, gold8, and gold9 */
+.gallery-container .gallery-item:nth-child(n+6) .product-image {
+  transform: translateY(-2cm); /* Move gold6, gold7, gold8, and gold9 images up by 2 cm */
+}
+
+.gallery-container .gallery-item:nth-child(n+6) .product-overlay {
+  transform: translateY(-2cm); /* Move titles and descriptions of gold6, gold7, gold8, and gold9 up by 2 cm */
+}
+
+.gallery-container .gallery-item:nth-child(6) .product-image {
+  transform: translateY(-2cm); /* Move gold6 image up by 2 cm */
+}
+
+.gallery-container .gallery-item:nth-child(6) .product-overlay {
+  transform: translateY(-2cm); /* Move gold6 title and description up by 2 cm */
+}
+
+.gold-products-page h1 {
+  font-weight: 900; /* Make the title extra bold */
+  text-transform: uppercase; /* Convert text to all caps */
+  background: linear-gradient(to right, gold, darkgoldenrod); /* Gradient gold effect */
+  -webkit-background-clip: text; /* Clip gradient to text */
+  -webkit-text-fill-color: transparent; /* Make gradient visible */
+  text-align: center; /* Center the title */
+}
+
+.skull-image {
+  width: 150px;
+  height: 150px;
+  object-fit: contain;
+  position: relative;
+}
+
+.skull-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  pointer-events: none; /* Prevent interference with skull image clicks */
+}
+
+.nav-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex; /* Align items horizontally */
+  gap: 20px; /* Add spacing between items */
+}
+
+.nav-item {
+  pointer-events: auto; /* Allow interaction with links */
+}
+
+.nav-link {
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: gold;
+}
+
+.top-nav {
+  position: absolute; /* Ensure it is outside the hero background */
+  top: 3cm; /* Position 3cm down from the top */
+  left: 3cm; /* Position 3cm right from the left */
+  z-index: 1000; /* Ensure it is above other elements */
+}
+
+.nav-link {
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav-link:hover {
+  background-color: gold;
+  color: black;
+}
+
+.skull-container {
+  position: fixed;
+  top: 2cm; /* Position 2cm down */
+  left: 1cm; /* Adjusted from 11cm to move 10cm to the left */
+  width: 80px;
+  height: 80px;
+  z-index: 1000;
+}
+
+.skull-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  position: relative;
+}
+
+.skull-link {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: white;
+  text-decoration: none;
+  text-shadow: 0 0 5px gold, 0 0 10px gold, 0 0 15px gold;
+  transition: text-shadow 0.3s ease, color 0.3s ease;
+}
+
+.skull-link:hover {
+  color: gold;
+  text-shadow: 0 0 10px gold, 0 0 20px gold, 0 0 30px gold;
+}
+
+.tabs-container {
+  display: flex; /* Align tabs horizontally */
+  justify-content: space-between; /* Separate left and right groups */
+  align-items: center; /* Vertically align tabs */
+  position: absolute; /* Position tabs inside the hero background */
+  top: 2cm; /* Lower the tabs by 1cm */
+  left: 20px; /* Align left group starting from the left */
+  right: 20px; /* Align right group starting from the right */
+  z-index: 1000; /* Ensure tabs are in front of the hero background */
+}
+
+.tabs-left {
+  display: flex; /* Align tabs horizontally */
+  gap: 20px; /* Add spacing between tabs */
+  margin-left: 1cm; /* Move the "Home" and "Shop" tabs 1 cm to the right */
+}
+
+.tabs-right {
+  display: flex; /* Align tabs horizontally */
+  gap: 20px; /* Add spacing between tabs */
+}
+
+.circle-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80px; /* Keep the larger size */
+  height: 80px; /* Keep the larger size */
+  border-radius: 50%; /* Keep the tabs circular */
+  font-size: 16px; /* Slightly larger font size */
+  font-weight: bold; /* Make the text bold */
+  text-transform: uppercase;
+  color: white; /* White text color */
+  text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black; /* Black outline */
+  text-decoration: none;
+  background-color: transparent; /* Transparent background */
+  border: 2px solid rgba(255, 215, 0, 0.5); /* Semi-transparent yellow border */
+  box-shadow: 0 0 10px rgba(255, 215, 0, 0.6); /* Yellow circular glow effect */
+  transition: box-shadow 0.3s ease, transform 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+.circle-link:hover {
+  box-shadow: 0 0 20px rgba(255, 215, 0, 0.8); /* Intensify yellow glow on hover */
+  transform: scale(1.1); /* Slightly enlarge on hover */
+  color: white; /* Keep text white on hover */
+  border-color: #ffd700; /* Bright yellow border on hover */
+}
+
+.skull-link {
+  text-decoration: none;
+}
+
+.skull-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 80px; /* Set consistent width for skulls */
+  height: 80px; /* Set consistent height for skulls */
+  position: relative; /* Enable positioning for child elements */
+}
+
+.skull-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.skull-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: white; /* Ensure text is visible */
+  text-shadow: 0 0 5px black; /* Add a shadow for better contrast */
+}
+
+.skull-link:hover .skull-image {
+  filter: brightness(1.2);
+  transform: scale(1.1);
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.skull-link:hover .skull-text {
+  text-shadow: 0 0 10px gold, 0 0 20px gold, 0 0 30px gold;
+}
+
+/* Remove hover effects */
+.skull-link:hover .skull-image {
+  filter: none;
+  transform: none;
+  transition: none;
+}
+
+.skull-link:hover .skull-text {
+  text-shadow: none;
+}
+
+/* Featured Products Section */
+.featured-products-section {
+  position: relative;
+  padding: 4rem 2rem;
+  background: linear-gradient(to bottom, rgba(40, 40, 40, 0.95), rgba(30, 30, 30, 0.98));
+  overflow: hidden;
+  z-index: 1;
+}
+
+.featured-products-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('/images/smoke.png') repeat;
+  opacity: 0.4;
+  animation: smoke 20s linear infinite;
+  z-index: -1;
+  filter: brightness(0.7) contrast(1.2);
+  mix-blend-mode: overlay;
+}
+
+@keyframes smoke {
+  0% {
+    transform: translate3d(0, 0, 0) scale(1.2);
+    opacity: 0.4;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    transform: translate3d(-15%, -15%, 0) scale(1.4);
+    opacity: 0.4;
+  }
+}
+
+.featured-products-container {
+  display: flex;
+  justify-content: space-between; /* Space the vaults evenly */
+  align-items: center; /* Center vaults vertically */
+  gap: 20px; /* Add spacing between the vaults */
+}
+
+.featured-product {
+  flex: 1; /* Each vault takes up half of the section */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.vault-title {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 10px;
+  text-transform: uppercase; /* Ensure all caps */
+}
+
+.gold-gradient {
+  background: linear-gradient(to right, gold, darkgoldenrod);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.silver-gradient {
+  background: linear-gradient(to right, silver, gray);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.vault-square {
+  width: 90%; /* Reduced size from 100% to 90% */
+  aspect-ratio: 1; /* Ensure the square is perfectly square */
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent; /* Transparent background */
+  border: 2px solid transparent; /* Remove border */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Default shadow */
+  transition: box-shadow 0.3s ease, transform 0.3s ease; /* Smooth transition */
+}
+
+.gold-square {
+  box-shadow: 0 0 30px rgba(255, 215, 0, 0.8); /* Gold bulb effect */
+}
+
+.silver-square {
+  box-shadow: 0 0 30px rgba(192, 192, 192, 0.8); /* Silver bulb effect */
+}
+
+.vault-square:hover {
+  transform: scale(1.05); /* Slight zoom effect on hover */
+  box-shadow: 0 0 40px rgba(255, 223, 0, 0.8); /* Intensified glow on hover */
+}
+
+.vault-image {
+  width: 70%; /* Maintain the reduced size */
+  height: 70%; /* Maintain aspect ratio */
+  object-fit: contain; /* Ensure the image fits properly */
+  border-radius: 50%; /* Make the image circular */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+}
+
+.vault-image:hover {
+  transform: scale(1.1); /* Slight zoom effect on hover */
+}
+
+.gold-product img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px; /* Add rounded corners */
+  box-shadow: 0 0 15px rgba(255, 215, 0, 0.5); /* Initial glow effect */
+  transition: box-shadow 0.3s ease, transform 0.3s ease; /* Smooth transition */
+}
+
+.gold-product img:hover {
+  transform: scale(1.05); /* Slight zoom effect on hover */
+  box-shadow: 0 0 30px rgba(255, 215, 0, 0.8); /* Intensified glow on hover */
+}
+
+.gold-products-title {
+  font-size: 32px;
+  font-weight: bold;
+  text-align: center;
+  margin: 20px 0;
+  text-transform: uppercase;
+  background: linear-gradient(to right, gold, darkgoldenrod);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gold-products-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Ensure consistent size */
+  gap: 20px;
+  padding: 20px;
+  margin-top: 100px; /* Add space below the navigation tabs */
+}
+
+.gold-product {
+  text-align: center;
+}
+
+.gold-product-image {
+  width: 220px; /* Increased width */
+  height: 220px; /* Increased height */
+  object-fit: cover; /* Ensure images fit properly */
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gold-product-image:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
+}
+
+.gold-product-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 10px;
+  text-transform: uppercase;
+  background: linear-gradient(to right, gold, darkgoldenrod);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+}
+
+.gold-product-description {
+  font-size: 14px;
+  color: #ccc;
+  margin-top: 10px;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.gold-products-gallery {
+  margin-top: 100px; /* Position below the navigation tabs */
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Space between rows */
+  padding: 20px;
+}
+
+.gold-products-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Flexible columns */
+  gap: 20px; /* Space between items */
+  justify-content: center; /* Center the rows */
+}
+
+.gold-products-row:first-child {
+  grid-template-columns: repeat(5, 1fr); /* 5 items in the first row */
+}
+
+.gold-products-row:last-child {
+  grid-template-columns: repeat(4, 1fr); /* 4 items in the second row */
+}
+
+.gold-product {
+  text-align: center;
+}
+
+.gold-product-image {
+  width: 220px; /* Increased width */
+  height: 220px; /* Increased height */
+  object-fit: cover; /* Ensure images fit properly */
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gold-product-image:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
+}
+
+.gold-product-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 10px;
+  text-transform: uppercase;
+  background: linear-gradient(to right, gold, darkgoldenrod);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+}
+
+.gold-product-description {
+  font-size: 14px;
+  color: #ccc;
+  margin-top: 10px;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.gold-products-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columns */
+  gap: 20px; /* Spacing between items */
+  padding: 20px;
+  justify-items: center; /* Center items horizontally */
+}
+
+.gold-product {
+  text-align: center;
+}
+
+.gold-product-image {
+  width: 220px; /* Slightly larger size */
+  height: 220px; /* Slightly larger size */
+  object-fit: cover; /* Ensure images fit properly */
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gold-product-image:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
+}
+
+.gold-product-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 10px;
+  text-transform: uppercase;
+  background: linear-gradient(to right, gold, darkgoldenrod);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+}
+
+.gold-product-description {
+  font-size: 14px;
+  color: #ccc;
+  margin-top: 10px;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.silver-products-page {
+  padding: 20px;
+  text-align: center;
+  background-color: #1a1a1a; /* Dark smoky background */
+  background-image: radial-gradient(circle, rgba(0, 0, 0, 0.5) 0%, transparent 70%);
+  color: white; /* Ensure text is readable */
+  min-height: 100vh; /* Ensure the page covers the full viewport height */
+}
+
+.silver-products-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columns */
+  gap: 20px; /* Spacing between items */
+  padding: 20px;
+  justify-items: center; /* Center items horizontally */
+}
+
+.silver-product {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.silver-product:hover {
+  transform: translateY(-5px);
+}
+
+.silver-product-image {
+  width: 220px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(192, 192, 192, 0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.silver-product:hover .silver-product-image {
+  transform: scale(1.05);
+  box-shadow: 0 0 30px rgba(192, 192, 192, 0.8);
+}
+
+.silver-product-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 10px;
+  text-transform: uppercase;
+  background: linear-gradient(to right, silver, gray);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+  text-shadow: 0 0 5px rgba(192, 192, 192, 0.5), 0 0 10px rgba(192, 192, 192, 0.7);
+}
+
+.silver-product-price {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #c0c0c0;
+  margin: 0.5rem 0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  font-family: 'Cinzel', serif;
+  letter-spacing: 1px;
+}
+
+.silver-product-description {
+  font-size: 14px;
+  color: #ccc;
+  margin-top: 10px;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.gold-products-content,
+.silver-products-content {
+  margin-top: 100px; /* Add spacing below the navigation tabs */
+}
+
+.gold-products-gallery,
+.silver-products-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columns */
+  gap: 20px; /* Spacing between items */
+  padding: 20px;
+  justify-items: center; /* Center items horizontally */
+}
+
+.silver-products-title {
+  font-size: 32px;
+  font-weight: bold;
+  text-transform: uppercase; /* Convert text to all caps */
+  background: linear-gradient(to right, silver, gray); /* Silver gradient */
+  -webkit-background-clip: text; /* Clip gradient to text */
+  -webkit-text-fill-color: transparent; /* Make gradient visible */
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.search-page {
+  position: relative;
+  min-height: 100vh; /* Ensure full viewport height */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start; /* Start content below navigation tabs */
+  padding-top: 100px; /* Add spacing below navigation tabs */
+}
+
+.search-content {
+  text-align: center;
+  color: white;
+  padding: 20px;
+  max-width: 600px;
+  width: 100%;
+  background: transparent; /* Ensure transparent background */
+}
+
+.search-form {
+  display: flex;
+  gap: 10px;
+  flex-direction: column; /* Stack inputs vertically */
+}
+
+.search-input {
+  padding: 15px;
+  font-size: 16px;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  width: 100%;
+}
+
+.search-button {
+  padding: 15px;
+  font-size: 16px;
+  font-weight: bold;
+  background-color: #ffd700; /* Gold button */
+  color: black;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.search-button:hover {
+  background-color: #e6b800; /* Darker gold on hover */
+}
+
+.grid {
+  /* display: block; */ /* This was overriding Tailwind's grid layout */
+}
+
+.thumbnail-image {
+  max-width: 80px; /* Limit the thumbnail width */
+  width: 100%; /* Ensure responsiveness */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 8px; /* Add rounded corners */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+  cursor: pointer; /* Indicate interactivity */
+  transition: transform 0.2s ease, box-shadow 0.2s ease; /* Smooth hover effect */
+}
+
+.thumbnail-image:hover {
+  transform: scale(1.1); /* Slight zoom effect on hover */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Intensify shadow on hover */
+}
+
+/* Ensure thumbnails stay in a single row on mobile */
+@media (max-width: 768px) {
+  .thumbnail-image {
+    max-width: 70px; /* Slightly smaller thumbnails on mobile */
+  }
+}
+
+/* Standardize Product Image Size */
+.silver-product-image,
+.gold-product-image {
+  width: 220px; /* Match the size of silver products */
+  height: 220px; /* Maintain aspect ratio */
+  object-fit: cover; /* Ensure images fit properly */
+  border-radius: 8px; /* Add rounded corners */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Add subtle shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+}
+
+.silver-product-image:hover,
+.gold-product-image:hover {
+  transform: scale(1.05); /* Slight zoom effect on hover */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5); /* Intensify shadow on hover */
+}
+
+/* Standardize Product Title Size */
+.silver-product-title,
+.gold-product-title {
+  font-size: 18px; /* Match the title size of silver products */
+  font-weight: bold;
+  margin-top: 10px;
+  text-transform: uppercase; /* Ensure all caps */
+  text-align: center;
+}
+
+/* Standardize Product Description */
+.silver-product-description,
+.gold-product-description {
+  font-size: 14px;
+  color: #ccc;
+  margin-top: 10px;
+  line-height: 1.5;
+  text-align: center;
+}
+
+/* Gold Gradient Bulb Effect for Titles */
+.gold-gradient-bulb-title {
+  background: linear-gradient(to right, gold, darkgoldenrod);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 5px rgba(255, 215, 0, 0.5), 0 0 10px rgba(255, 215, 0, 0.7), 0 0 15px rgba(255, 215, 0, 0.9);
+}
+
+/* Gold Gradient Bulb Effect for Titles */
+.gold-gradient-bulb {
+  background: linear-gradient(to right, gold, darkgoldenrod);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 5px rgba(255, 215, 0, 0.5), 0 0 10px rgba(255, 215, 0, 0.7), 0 0 15px rgba(255, 215, 0, 0.9);
+}
+
+/* Gold Gradient for Titles */
+.gold-gradient {
+  background: linear-gradient(to right, gold, darkgoldenrod);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Gold Bulb Effect for Products */
+.gold-bulb-effect {
+  box-shadow: 0 0 15px rgba(255, 215, 0, 0.5); /* Initial glow effect */
+  transition: box-shadow 0.3s ease, transform 0.3s ease; /* Smooth hover effect */
+}
+
+.gold-bulb-effect:hover {
+  transform: scale(1.05); /* Slight zoom effect on hover */
+  box-shadow: 0 0 30px rgba(255, 215, 0, 0.8); /* Intensified glow on hover */
+}
+
+/* Override Shop Page Product Grid Layout */
+.silver-products-gallery {
+  display: grid !important; /* Ensure grid layout is applied */
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)) !important; /* Responsive columns */
+  gap: 20px !important; /* Add spacing between items */
+  justify-items: center !important; /* Center items horizontally */
+  padding: 20px !important; /* Add padding around the grid */
+}
+
+.silver-product {
+  text-align: center !important; /* Center-align product content */
+  background: none !important; /* Remove any enforced background */
+  border: none !important; /* Remove any enforced border */
+  box-shadow: none !important; /* Remove any enforced shadow */
+}
+
+.silver-product img {
+  width: 220px !important; /* Enforce consistent image size */
+  height: 220px !important; /* Maintain aspect ratio */
+  object-fit: cover !important; /* Ensure images fit properly */
+  border-radius: 8px !important; /* Add rounded corners */
+  transition: transform 0.3s ease, box-shadow 0.3s ease !important; /* Smooth hover effect */
+}
+
+.silver-product img:hover {
+  transform: scale(1.05) !important; /* Slight zoom effect on hover */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5) !important; /* Add hover shadow */
+}
+
+.silver-product-title {
+  font-size: 18px !important; /* Enforce consistent title size */
+  font-weight: bold !important;
+  margin-top: 10px !important;
+  text-transform: uppercase !important; /* Convert text to all caps */
+  text-align: center !important;
+}
+
+.silver-product-description {
+  font-size: 14px !important; /* Enforce consistent description size */
+  color: #ccc !important;
+  margin-top: 10px !important;
+  line-height: 1.5 !important;
+  text-align: center !important;
+}
+
+/* Shop Title Styling */
+.silver-products-title {
+  color: white !important; /* Make the title white */
+  font-weight: bold !important; /* Make the title bold */
+  text-transform: uppercase; /* Ensure all caps */
+  text-align: center; /* Center the title */
+}
+
+/* Silver Glow Effect for Products */
+.silver-glow-effect {
+  box-shadow: 0 0 15px rgba(192, 192, 192, 0.5); /* Initial glow effect */
+  transition: box-shadow 0.3s ease, transform 0.3s ease; /* Smooth hover effect */
+}
+
+.silver-glow-effect:hover {
+  transform: scale(1.05); /* Slight zoom effect on hover */
+  box-shadow: 0 0 30px rgba(192, 192, 192, 0.8); /* Intensified glow on hover */
+}
+
+/* Silver Bulb Effect for Products */
+.silver-bulb-effect {
+  box-shadow: 0 0 15px rgba(192, 192, 192, 0.5); /* Initial glow effect */
+  transition: box-shadow 0.3s ease, transform 0.3s ease; /* Smooth hover effect */
+}
+
+.silver-bulb-effect:hover {
+  transform: scale(1.05); /* Slight zoom effect on hover */
+  box-shadow: 0 0 30px rgba(192, 192, 192, 0.8); /* Intensified glow on hover */
+}
+
+.silver-product-price {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #c0c0c0;
+  margin: 0.5rem 0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  font-family: 'Cinzel', serif;
+  letter-spacing: 1px;
+}
+
+.product-detail-page {
+  min-height: 100vh;
+  background-color: #1a1a1a;
+  background-image: radial-gradient(circle, rgba(0, 0, 0, 0.5) 0%, transparent 70%);
+  color: white;
+  padding: 20px;
+}
+
+.product-detail-content {
+  max-width: 1200px;
+  margin: 82px auto 0; /* Increased from 80px to 82px (0.2cm = ~2px) */
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  padding: 20px;
+}
+
+.product-detail-info {
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* Reduced from 20px */
+}
+
+.product-detail-image-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.product-detail-image {
+  width: 100%;
+  max-width: 350px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 0 30px rgba(192, 192, 192, 0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-top: 1.2cm; /* Increased from 1cm to 1.2cm */
+}
+
+.product-detail-image:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 40px rgba(192, 192, 192, 0.8);
+}
+
+.product-detail-title {
+  font-size: 2.2rem; /* Reduced from 2.5rem */
+  font-weight: bold;
+  color: #c0c0c0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  font-family: 'Cinzel', serif;
+  letter-spacing: 1px;
+  margin-bottom: 5px; /* Added to reduce space between title and price */
+}
+
+.product-detail-price {
+  font-size: 1.8rem; /* Reduced from 2rem */
+  font-weight: bold;
+  color: #c0c0c0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  font-family: 'Cinzel', serif;
+  letter-spacing: 1px;
+}
+
+.product-detail-description {
+  font-size: 1rem; /* Reduced from 1.1rem */
+  line-height: 1.4; /* Reduced from 1.6 */
+  color: #ccc;
+  margin-top: 10px; /* Reduced from 20px */
+}
+
+.add-to-cart-button {
+  background: linear-gradient(to right, #c0c0c0, #a0a0a0);
+  color: black;
+  border: none;
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-top: 15px; /* Reduced from 20px */
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.add-to-cart-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(192, 192, 192, 0.5);
+}
+
+.product-not-found {
+  text-align: center;
+  padding: 100px 20px;
+  color: #c0c0c0;
+  font-size: 2rem;
+  font-family: 'Cinzel', serif;
+}
+
+@media (max-width: 768px) {
+  .product-detail-content {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .product-detail-title {
+    font-size: 2rem;
+  }
+
+  .product-detail-price {
+    font-size: 1.5rem;
+  }
+}
+
+.gold-add-to-cart {
+  background: linear-gradient(to right, gold, darkgoldenrod);
+  color: black;
+  border: none;
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-top: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.gold-add-to-cart:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(255, 215, 0, 0.5);
+}
+
+.silver-add-to-cart {
+  background: linear-gradient(to right, #c0c0c0, #a0a0a0);
+  color: black;
+  border: none;
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-top: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.silver-add-to-cart:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(192, 192, 192, 0.5);
+}
+
+/* Contact Page Styles */
+.contact-page {
+  min-height: 100vh;
+  background-color: #1a1a1a;
+  background-image: radial-gradient(circle, rgba(0, 0, 0, 0.5) 0%, transparent 70%);
+  color: white;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-content {
+  max-width: 1200px;
+  width: 100%;
+  margin: 100px auto 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  padding: 40px;
+}
+
+.contact-left {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact-title {
+  font-size: 3.5rem;
+  font-weight: bold;
+  font-family: 'Cinzel', serif;
+  background: linear-gradient(to right, gold, silver);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 20px;
+}
+
+.contact-description {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #ccc;
+  max-width: 400px;
+}
+
+.contact-right {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 40px;
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+}
+
+.message-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  font-family: 'Cinzel', serif;
+  background: linear-gradient(to right, silver, white);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 30px;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact-input,
+.contact-textarea {
+  width: 100%;
+  padding: 15px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  color: white;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.contact-input:focus,
+.contact-textarea:focus {
+  outline: none;
+  border-color: rgba(255, 215, 0, 0.5);
+  box-shadow: 0 0 10px rgba(255, 215, 0, 0.2);
+}
+
+.contact-textarea {
+  resize: vertical;
+  min-height: 150px;
+}
+
+.submit-button {
+  padding: 15px 30px;
+  background: linear-gradient(to right, gold, silver);
+  color: black;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  align-self: flex-end;
+}
+
+.submit-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(255, 215, 0, 0.3);
+}
+
+@media (max-width: 768px) {
+  .contact-content {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    padding: 20px;
+  }
+
+  .contact-title {
+    font-size: 2.5rem;
+  }
+
+  .message-title {
+    font-size: 2rem;
+  }
+
+  .contact-right {
+    padding: 30px;
+  }
+
+  .submit-button {
+    width: 100%;
+  }
+}
+
+/* Cart Page Styles */
+.cart-page {
+  min-height: 100vh;
+  background-color: #1a1a1a;
+  background-image: radial-gradient(circle, rgba(0, 0, 0, 0.5) 0%, transparent 70%);
+  color: white;
+  padding: 20px;
+}
+
+.cart-content {
+  max-width: 1200px;
+  margin: 100px auto 0;
+  padding: 20px;
+}
+
+.cart-layout {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 40px;
+}
+
+.cart-items {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  padding: 20px;
+  backdrop-filter: blur(10px);
+}
+
+.cart-item {
+  display: flex;
+  align-items: flex-start;
+  padding: 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  gap: 20px;
+}
+
+.item-image {
+  flex-shrink: 0;
+  width: 100px;
+  height: 100px;
+  margin-top: -4cm; /* Move the image 4cm higher (2cm more than before) */
+}
+
+.item-image img {
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  object-fit: cover;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.item-details {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.item-name {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #c0c0c0;
+}
+
+.item-price {
+  font-size: 1.1rem;
+  color: gold;
+}
+
+.quantity-controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 5px;
+}
+
+@media (max-width: 768px) {
+  .cart-item {
+    flex-direction: row;
+    text-align: left;
+    align-items: flex-start;
+  }
+  
+  .quantity-controls {
+    justify-content: flex-start;
+  }
+  
+  .remove-btn {
+    margin-left: auto;
+  }
+}
+
+.order-summary {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  padding: 30px;
+  height: fit-content;
+  backdrop-filter: blur(10px);
+  position: sticky;
+  top: 20px;
+}
+
+.summary-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #eee;
+}
+
+.summary-details {
+  margin-bottom: 20px;
+}
+
+.summary-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  font-size: 1rem;
+}
+
+.summary-row.total {
+  font-weight: 600;
+  font-size: 1.1rem;
+  border-top: 2px solid #eee;
+  margin-top: 10px;
+  padding-top: 15px;
+}
+
+.free-shipping-message {
+  background: #f8f9fa;
+  border: 1px solid #e9ecef;
+  border-radius: 4px;
+  padding: 12px;
+  margin: 15px 0;
+  text-align: center;
+  color: #2C5282;
+  font-size: 0.9rem;
+}
+
+.checkout-btn {
+  width: 100%;
+  background: #2C5282;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 12px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  margin-bottom: 10px;
+}
+
+.checkout-btn:hover {
+  background: #1a365d;
+}
+
+.continue-shopping-btn {
+  display: block;
+  width: 100%;
+  background: #e0e0e0;
+  color: #333;
+  text-align: center;
+  text-decoration: none;
+  border: none;
+  border-radius: 4px;
+  padding: 12px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.continue-shopping-btn:hover {
+  background: #d0d0d0;
+}
+
+.empty-cart {
+  text-align: center;
+  padding: 40px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.empty-cart p {
+  font-size: 1.2rem;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+  .cart-layout {
+    grid-template-columns: 1fr;
+  }
+  
+  .cart-item {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .quantity-controls {
+    justify-content: center;
+  }
+  
+  .remove-btn {
+    margin: 10px auto 0;
+  }
+}
+
+/* Success Page Styles */
+.success-page {
+  min-height: 100vh;
+  background-color: #1a1a1a;
+  background-image: radial-gradient(circle, rgba(0, 0, 0, 0.5) 0%, transparent 70%);
+  color: white;
+  padding: 20px;
+}
+
+.success-content {
+  max-width: 800px;
+  margin: 100px auto 0;
+  padding: 40px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+}
+
+.success-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  font-family: 'Cinzel', serif;
+  background: linear-gradient(to right, gold, silver);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 20px;
+}
+
+.success-message {
+  font-size: 1.2rem;
+  color: #c0c0c0;
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+.vault-section {
+  min-height: 100vh;
+  background-color: #2a2a2a;
+  background-image: 
+    radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.05), transparent);
+  position: relative;
+  overflow: hidden;
+}
+
+.vault-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    repeating-linear-gradient(
+      45deg,
+      rgba(255, 255, 255, 0.03) 0px,
+      rgba(255, 255, 255, 0.03) 1px,
+      transparent 1px,
+      transparent 10px
+    );
+  pointer-events: none;
+}
+
+.vault-section::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(
+      circle at 30% 30%,
+      rgba(255, 255, 255, 0.05) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      circle at 70% 70%,
+      rgba(255, 255, 255, 0.05) 0%,
+      transparent 50%
+    );
+  pointer-events: none;
+}
+
+.price-container {
+  display: flex;
+  align-items: baseline;
+  gap: 8px; /* Reduced from 10px */
+  margin-bottom: 10px; /* Added to reduce space before description */
+}
+
+.tax-included {
+  font-size: 0.9rem;
+  color: #888;
+  font-style: italic;
+}
+
+.cart-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  font-family: 'Cinzel', serif;
+  color: white;
+  text-shadow: -2px -2px 0 black, 2px -2px 0 black, -2px 2px 0 black, 2px 2px 0 black;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.quantity-controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.quantity-btn {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: white;
+  width: 30px;
+  height: 30px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.quantity-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.quantity {
+  font-size: 1.1rem;
+  min-width: 30px;
+  text-align: center;
+  color: white;
+}
+
+.remove-btn {
+  padding: 8px 16px;
+  background: rgba(255, 0, 0, 0.2);
+  border: 1px solid rgba(255, 0, 0, 0.3);
+  color: #ff6b6b;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-left: auto;
+}
+
+.remove-btn:hover {
+  background: rgba(255, 0, 0, 0.3);
+}
+
+.summary-title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  font-family: 'Cinzel', serif;
+  color: #c0c0c0;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.summary-details {
+  margin-bottom: 30px;
+}
+
+.summary-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 1.1rem;
+  color: white;
+}
+
+.summary-row.total {
+  border-top: 2px solid rgba(255, 255, 255, 0.2);
+  border-bottom: none;
+  margin-top: 10px;
+  padding-top: 20px;
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: gold;
+}
+
+.free-shipping-message {
+  background: rgba(44, 82, 130, 0.2);
+  border: 1px solid rgba(44, 82, 130, 0.3);
+  border-radius: 8px;
+  padding: 15px;
+  margin: 15px 0;
+  text-align: center;
+  color: #89CFF0;
+  font-size: 0.95rem;
+  backdrop-filter: blur(5px);
+}
+
+.checkout-btn {
+  width: 100%;
+  padding: 15px;
+  background: #e0e0e0;
+  color: black;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+
+.checkout-btn:hover {
+  transform: translateY(-2px);
+  background: #d0d0d0;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.continue-shopping-btn {
+  display: block;
+  width: 100%;
+  padding: 15px;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.continue-shopping-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+}
+
+.empty-cart {
+  text-align: center;
+  padding: 40px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+  color: #c0c0c0;
+}
+
+.empty-cart p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+  .cart-layout {
+    grid-template-columns: 1fr;
+  }
+  
+  .cart-item {
+    flex-direction: row;
+    text-align: left;
+  }
+  
+  .quantity-controls {
+    justify-content: flex-start;
+  }
+  
+  .remove-btn {
+    margin-left: auto;
+  }
+  
+  .cart-title {
+    font-size: 2rem;
+  }
+}
