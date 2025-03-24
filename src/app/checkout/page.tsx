@@ -6,8 +6,16 @@ import { loadStripe } from "@stripe/stripe-js";
 
 const stripePromise = loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY!);
 
+// Define the type for cart items
+interface CartItem {
+  id: number;
+  title: string;
+  price: number;
+  quantity: number;
+}
+
 export default function CheckoutPage() {
-  const [cart, setCart] = useState([]);
+  const [cart, setCart] = useState<CartItem[]>([]); // Explicitly type the cart state
 
   useEffect(() => {
     const storedCart = JSON.parse(localStorage.getItem("cart") || "[]");
@@ -20,7 +28,6 @@ export default function CheckoutPage() {
     const stripe = await stripePromise;
 
     try {
-      // Debugging: Log the cart data being sent
       console.log('Cart Data:', cart);
 
       const response = await fetch('/api/checkout/session', {
@@ -45,8 +52,8 @@ export default function CheckoutPage() {
         await stripe.redirectToCheckout({ sessionId: session.id });
       }
     } catch (error) {
-      console.error('Error during checkout:', error.message);
-      alert(`Failed to proceed to payment: ${error.message}`);
+      console.error('Error during checkout:', error instanceof Error ? error.message : error);
+      alert(`Failed to proceed to payment: ${error instanceof Error ? error.message : 'Unknown error'}`);
     }
   };
 
