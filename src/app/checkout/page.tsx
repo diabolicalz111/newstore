@@ -59,19 +59,19 @@ export default function CheckoutPage() {
   };
 
   return (
-    <div className="text-white p-10">
+    <div className="checkout-page">
       <NavigationTabs />
-      <h1 className="text-3xl font-bold mb-6">Checkout</h1>
-      <div className="mb-6">
+      <h1 className="text-3xl font-bold mb-6 text-center">Checkout</h1>
+      <div className="order-summary">
         <h3 className="text-xl font-bold">Order Summary</h3>
         <ul className="space-y-2">
           {cart.map((item) => (
-            <li key={item.id}>
-              {item.title} - ${item.price} x {item.quantity}
+            <li key={item.id} className="flex justify-between items-center">
+              <span>{item.title}</span>
+              <span>${item.price} x {item.quantity}</span>
             </li>
           ))}
         </ul>
-        <h3 className="text-xl font-bold mt-4">Total: ${totalPrice.toFixed(2)}</h3>
       </div>
       <button
         onClick={handleCheckout}

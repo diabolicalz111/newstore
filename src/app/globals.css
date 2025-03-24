@@ -2312,3 +2312,38 @@
     font-size: 2rem;
   }
 }
+
+/* General Mobile Styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 100%;
+  padding: 0 16px; /* Add padding for smaller screens */
+  box-sizing: border-box;
+}
+
+/* Navigation Tabs */
+.tabs-container {
+  display: flex;
+  flex-wrap: wrap; /* Allow tabs to wrap on smaller screens */
+  justify-content: space-between;
+  gap: 10px; /* Add spacing between tabs */
+}
+
+.circle-link {
+  width: 60px; /* Reduce size for smaller screens */
+  height: 60px;
+  font-size: 12px; /* Adjust font size */
+}
+
+/* Checkout Page */
+.checkout-page {
+  padding: 16px; /* Add padding for smaller screens */
+}
+
+.checkout-btn {

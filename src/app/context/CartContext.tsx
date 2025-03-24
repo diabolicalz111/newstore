@@ -8,7 +8,7 @@ interface CartItem {
   price: number;
   image: string;
   quantity: number;
-  priceId?: string; // Ensure priceId is included in the CartItem interface
+  priceId: string; // Make priceId a required property
 }
 
 interface CartContextType {
@@ -49,7 +49,7 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
         );
       }
       // If item doesn't exist, add it
-      return [...prevItems, { ...item, priceId: item.priceId }]; // Ensure priceId is included
+      return [...prevItems, item]; // Ensure priceId is included
     });
   };
 
