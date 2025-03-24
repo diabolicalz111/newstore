@@ -12,6 +12,7 @@ interface CartItem {
   title: string;
   price: number;
   quantity: number;
+  priceId: string; // Add priceId to match Stripe's requirements
 }
 
 export default function CheckoutPage() {

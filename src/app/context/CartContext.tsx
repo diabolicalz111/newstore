@@ -8,6 +8,7 @@ interface CartItem {
   price: number;
   image: string;
   quantity: number;
+  priceId?: string; // Ensure priceId is included in the CartItem interface
 }
 
 interface CartContextType {
@@ -48,7 +49,7 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
         );
       }
       // If item doesn't exist, add it
-      return [...prevItems, item];
+      return [...prevItems, { ...item, priceId: item.priceId }]; // Ensure priceId is included
     });
   };
 
@@ -88,4 +89,4 @@ export function useCart() {
     throw new Error('useCart must be used within a CartProvider');
   }
   return context;
-} 
+}
