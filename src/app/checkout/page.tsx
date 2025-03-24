@@ -72,6 +72,7 @@ export default function CheckoutPage() {
             </li>
           ))}
         </ul>
+        <p className="text-lg font-bold mt-4">Total: ${totalPrice.toFixed(2)}</p>
       </div>
       <button
         onClick={handleCheckout}
