@@ -49,7 +49,10 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
         );
       }
       // If item doesn't exist, add it
-      return [...prevItems, item]; // Ensure priceId is included
+      return [
+        ...prevItems,
+        { ...item, priceId: item.priceId || "" }, // Ensure priceId is included
+      ];
     });
   };
 

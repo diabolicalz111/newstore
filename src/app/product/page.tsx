@@ -8,7 +8,7 @@ interface Product {
   name: string;
   price: number;
   image: string;
-  priceId: string;
+  priceId?: string; // Make priceId optional in the Product interface
 }
 
 export default function ProductPage() {
@@ -41,7 +41,7 @@ export default function ProductPage() {
         price: product.price,
         image: product.image,
         quantity: 1, // Default quantity
-        priceId: product.priceId, // Include priceId from the product object
+        priceId: product.priceId || "", // Ensure priceId is included
       });
     }
   };
