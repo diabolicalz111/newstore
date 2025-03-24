@@ -10,7 +10,7 @@ export default function ProductPage() {
     name: string;
     price: number;
     image: string;
-    priceId: string;
+    priceId: string; // Ensure priceId is part of the product object
   }) => {
     addToCart({
       id: product.id,
@@ -18,7 +18,7 @@ export default function ProductPage() {
       price: product.price,
       image: product.image,
       quantity: 1, // Default quantity
-      priceId: product.priceId, // Ensure priceId is included
+      priceId: product.priceId, // Include priceId from the product object
     });
   };
 
