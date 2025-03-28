@@ -506,9 +506,10 @@
 
 .about-text h2,
 .about-text p {
-  background: linear-gradient(to right, gold, silver); /* Gradient gold-silver effect */
-  -webkit-background-clip: text; /* Clip gradient to text */
-  -webkit-text-fill-color: transparent; /* Make gradient visible */
+  color: white; /* Set text color to white */
+  background: none; /* Remove gradient effect */
+  -webkit-background-clip: unset; /* Reset background clip */
+  -webkit-text-fill-color: unset; /* Reset text fill color */
   text-shadow: none; /* Remove any text shadow */
 }
 
@@ -2362,4 +2363,68 @@ body {
 
 .checkout-btn:hover {
   background: #1a365d;
+}
+
+/* Responsive adjustments for mobile screens */
+@media (max-width: 768px) {
+  .hero-section {
+    padding: 20px;
+    text-align: center;
+  }
+
+  .featured-products-container {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .vault-title {
+    font-size: 1rem; /* Adjust font size for mobile */
+  }
+
+  .vault-square {
+    width: 90%; /* Reduce size for mobile */
+    margin: 0 auto;
+  }
+
+  .about-section {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .about-text {
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .product-detail-content {
+    grid-template-columns: 1fr; /* Stack content vertically */
+    gap: 20px;
+  }
+
+  .product-detail-image {
+    max-width: 100%; /* Ensure image fits within screen */
+  }
+
+  .product-detail-info {
+    text-align: center;
+  }
+
+  .cart-layout {
+    grid-template-columns: 1fr; /* Stack cart items and summary */
+  }
+
+  .cart-item {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .quantity-controls {
+    justify-content: center;
+  }
+
+  .checkout-btn,
+  .continue-shopping-btn {
+    width: 100%; /* Full width buttons */
+  }
 }
