@@ -44,7 +44,7 @@ footer {
 }
 
 .modal {
-    display: none;
+    display: none; /* Hidden by default */
     position: fixed;
     z-index: 1000;
     left: 0;
@@ -80,6 +80,6 @@ footer {
 }
 
 .logo {
-    width: 200px; /* Increased width */
+    width: 160px; /* Slightly reduced width */
     height: auto; /* Maintain aspect ratio */
 }
