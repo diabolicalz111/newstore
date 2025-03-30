@@ -3,40 +3,32 @@ document.addEventListener("DOMContentLoaded", () => {
     const policiesModal = document.getElementById("policies-modal");
     const closeButton = document.querySelector(".close-button");
 
+    // Log to verify elements are correctly selected
+    console.log("policiesButton:", policiesButton);
+    console.log("policiesModal:", policiesModal);
+    console.log("closeButton:", closeButton);
+
+    if (!policiesButton || !policiesModal || !closeButton) {
+        console.error("One or more elements (policiesButton, policiesModal, closeButton) are missing in the DOM.");
+        return;
+    }
+
     policiesButton.addEventListener("click", () => {
+        console.log("Policies button clicked"); // Log to confirm event firing
         policiesModal.style.display = "block"; // Show the modal
-        calculateShippingCost(); // Calculate and display shipping costs
     });
 
     closeButton.addEventListener("click", () => {
+        console.log("Close button clicked"); // Log to confirm event firing
         policiesModal.style.display = "none"; // Hide the modal
     });
 
     window.addEventListener("click", (event) => {
         if (event.target === policiesModal) {
+            console.log("Clicked outside the modal"); // Log to confirm event firing
             policiesModal.style.display = "none"; // Hide the modal if clicked outside
         }
     });
 
-    function calculateShippingCost() {
-        const domesticShipping = 10.0; // Updated standard shipping within NZ
-        const internationalShipping = {
-            Australia: 25.0,
-            USA_UK_Canada: 55.0,
-            RestOfWorld: 65.0,
-        };
-
-        const shippingDetails = `
-            <h3>Shipping Costs:</h3>
-            <ul>
-                <li>Domestic (New Zealand): $${domesticShipping.toFixed(2)}</li>
-                <li>Australia: $${internationalShipping.Australia.toFixed(2)}</li>
-                <li>USA, UK, Canada: $${internationalShipping.USA_UK_Canada.toFixed(2)}</li>
-                <li>Rest of the World: $${internationalShipping.RestOfWorld.toFixed(2)}</li>
-            </ul>
-        `;
-
-        const modalContent = document.querySelector(".modal-content");
-        modalContent.insertAdjacentHTML("beforeend", shippingDetails);
-    }
+    // Removed code related to thumbnails
 });
