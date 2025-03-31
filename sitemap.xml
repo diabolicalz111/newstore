@@ -1,13 +1,127 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-    <url>
-        <loc>https://www.diabolicaljewellery.com/</loc>
-        <lastmod>2023-10-01</lastmod>
-        <priority>1.0</priority>
-    </url>
-    <url>
-        <loc>https://www.diabolicaljewellery.com/about.html</loc>
-        <lastmod>2023-10-01</lastmod>
-        <priority>0.8</priority>
-    </url>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
+<url>
+  <loc>https://www.diabolicaljewellery.com/</loc>
+  <lastmod>2025-03-31T08:35:16+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://www.diabolicaljewellery.com/shop</loc>
+  <lastmod>2025-03-31T08:35:16+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.diabolicaljewellery.com/contact</loc>
+  <lastmod>2025-03-31T08:35:16+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.diabolicaljewellery.com/cart</loc>
+  <lastmod>2025-03-31T08:35:16+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.diabolicaljewellery.com/product/200</loc>
+  <lastmod>2025-03-31T08:35:16+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.diabolicaljewellery.com/product/201</loc>
+  <lastmod>2025-03-31T08:35:16+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.diabolicaljewellery.com/product/202</loc>
+  <lastmod>2025-03-31T08:35:16+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.diabolicaljewellery.com/product/203</loc>
+  <lastmod>2025-03-31T08:35:16+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.diabolicaljewellery.com/product/204</loc>
+  <lastmod>2025-03-31T08:35:16+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.diabolicaljewellery.com/product/205</loc>
+  <lastmod>2025-03-31T08:35:16+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.diabolicaljewellery.com/product/206</loc>
+  <lastmod>2025-03-31T08:35:16+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.diabolicaljewellery.com/product/207</loc>
+  <lastmod>2025-03-31T08:35:16+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.diabolicaljewellery.com/product/208</loc>
+  <lastmod>2025-03-31T08:35:16+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.diabolicaljewellery.com/product/209</loc>
+  <lastmod>2025-03-31T08:35:16+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.diabolicaljewellery.com/product/101</loc>
+  <lastmod>2025-03-31T08:35:16+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.diabolicaljewellery.com/product/102</loc>
+  <lastmod>2025-03-31T08:35:16+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.diabolicaljewellery.com/product/103</loc>
+  <lastmod>2025-03-31T08:35:16+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.diabolicaljewellery.com/product/104</loc>
+  <lastmod>2025-03-31T08:35:16+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.diabolicaljewellery.com/product/105</loc>
+  <lastmod>2025-03-31T08:35:16+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.diabolicaljewellery.com/product/106</loc>
+  <lastmod>2025-03-31T08:35:16+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.diabolicaljewellery.com/product/107</loc>
+  <lastmod>2025-03-31T08:35:16+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.diabolicaljewellery.com/product/108</loc>
+  <lastmod>2025-03-31T08:35:16+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.diabolicaljewellery.com/product/109</loc>
+  <lastmod>2025-03-31T08:35:16+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+
+
 </urlset>
