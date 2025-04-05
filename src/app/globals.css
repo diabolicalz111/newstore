@@ -568,6 +568,22 @@
   z-index: 1000; /* Ensure it appears above all other elements */
   box-shadow: 0 0 10px gold; /* Glowing effect */
   animation: glow 1.5s infinite alternate; /* Glowing animation */
+  overflow: hidden; /* Hide overflowing text */
+}
+
+.free-shipping-banner .scrolling-text {
+  display: inline-block;
+  white-space: nowrap; /* Prevent text from wrapping */
+  animation: scroll-left 10s linear infinite; /* Continuous scrolling animation */
+}
+
+@keyframes scroll-left {
+  from {
+    transform: translateX(100%); /* Start off-screen to the right */
+  }
+  to {
+    transform: translateX(-100%); /* End off-screen to the left */
+  }
 }
 
 @keyframes glow {
@@ -2427,4 +2443,65 @@ body {
   .continue-shopping-btn {
     width: 100%; /* Full width buttons */
   }
+}
+
+.discount-banner {
+  background-color: #ffcc00; /* Bright yellow for visibility */
+  color: #000; /* Black text for contrast */
+  text-align: center;
+  padding: 10px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border: 2px solid #000;
+}
+
+.discount-message {
+  font-size: 0.875rem; /* Small text size */
+  color: #28a745; /* Green color */
+  font-weight: bold;
+  margin-top: 10px; /* Add spacing above the message */
+}
+
+.discounted-price {
+  font-size: 0.875rem; /* Small text size */
+  color: #28a745; /* Green color */
+  font-weight: bold;
+  margin-top: 5px; /* Add spacing above the discounted price */
+}
+
+.line-through {
+  text-decoration: line-through;
+  color: #888; /* Gray color for the original price */
+}
+
+button {
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+
+/* Policies Page */
+.policies-page {
+  background-color: #f8f9fa; /* Light background for readability */
+  min-height: 100vh; /* Full viewport height */
+  padding: 20px;
+  padding-top: calc(80px + 2cm); /* Adjust spacing to move up by 1cm */
+}
+
+.policies-section {
+  background-color: #ffffff; /* White background for content */
+  color: #333333; /* Dark text for readability */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.policy h2 {
+  color: #2c5282; /* Dark blue for headings */
+}
+
+.policy p {
+  line-height: 1.6; /* Improve readability */
 }

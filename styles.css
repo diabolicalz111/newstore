@@ -84,16 +84,6 @@ close-button:hover,
     height: auto; /* Maintain aspect ratio */
 }
 
-.flash-sale-banner {
-    background-color: #ffcc00;
-    color: #000;
-    text-align: center;
-    padding: 10px 0;
-    font-size: 18px;
-    font-weight: bold;
-    margin-bottom: 20px;
-}
-
 #product-list {
     margin: 20px;
 }
@@ -109,7 +99,9 @@ close-button:hover,
     margin: 5px 0;
 }
 
-.discounted-price {
+/* Removed discounted-price styles */
+/* .discounted-price {
     color: #ff0000;
     font-weight: bold;
-}
+    display: inline; 
+} */

@@ -215,7 +215,7 @@ export default function ProductDetail({ params }: { params: { id: string } }) {
       addToCart({
         id: product.id,
         name: product.name,
-        price: product.price,
+        price: product.price * 0.7, // Use discounted price
         image: product.image,
         quantity: quantity,
         priceId: product.priceId || "",
@@ -247,11 +247,14 @@ export default function ProductDetail({ params }: { params: { id: string } }) {
             {product.name}
           </h1>
           <div className="price-container">
-            <span className="product-detail-price text-lg md:text-xl">
+            <span className="product-detail-price text-lg md:text-xl line-through text-gray-500">
               NZD ${product.price.toFixed(2)}
             </span>
             <span className="tax-included text-sm">(Price includes tax)</span>
           </div>
+          <p className="discounted-price text-green-500 text-sm">
+            Discounted Price: NZD ${(product.price * 0.7).toFixed(2)}
+          </p>
           <p className="product-detail-description text-base md:text-lg">
             {product.description}
           </p>

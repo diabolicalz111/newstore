@@ -1,7 +1,7 @@
 "use client";
 
-import NavigationTabs from "./components/NavigationTabs";
 import { useRouter } from "next/navigation";
+import NavigationTabs from "./components/NavigationTabs";
 
 export default function Home() {
   const router = useRouter();
@@ -18,7 +18,9 @@ export default function Home() {
     <div>
       {/* Free Shipping Banner */}
       <div className="free-shipping-banner">
-        Free Shipping Over $150
+        <span className="scrolling-text">
+          Everything 30% off and Free Shipping Over $150
+        </span>
       </div>
 
       {/* Section 1: Hero Section */}
@@ -103,6 +105,12 @@ export default function Home() {
             When you wear Diabolical, you don't just shine—you own the moment.
           </p>
         </div>
+        <button
+          onClick={() => window.location.href = "/policies"}
+          className="mt-6 px-8 py-3 border border-yellow-500 text-yellow-500 font-bold rounded-full bg-transparent hover:bg-yellow-500 hover:text-black transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
+        >
+          View Policies
+        </button>
       </section>
     </div>
   );

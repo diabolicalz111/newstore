@@ -15,7 +15,7 @@ export default function CartPage() {
   const [error, setError] = useState<string | null>(null);
 
   const subtotal = cartItems.reduce((total, item) => total + item.price * item.quantity, 0);
-  const shipping = cartItems.length > 0 && subtotal < 150 ? 5.00 : 0; // Free shipping over $150
+  const shipping = cartItems.length > 0 && subtotal < 150 ? 10.00 : 0; // Free shipping over $150
   const total = subtotal + shipping;
 
   const handleContinueShopping = () => {

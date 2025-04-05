@@ -15,12 +15,26 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         throw new Error('Invalid request: "items" must be an array.');
       }
 
+      const shippingCost = req.body.shippingCost || 0; // Get shipping cost from the request body
+
       const session = await stripe.checkout.sessions.create({
         payment_method_types: ['card'],
-        line_items: req.body.items.map((item: { price: string; quantity: number }) => ({
-          price: item.price || "", // Ensure price is included
-          quantity: item.quantity || 1, // Default to 1 if quantity is missing
-        })),
+        line_items: [
+          ...req.body.items.map((item: { price: string; quantity: number }) => ({
+            price: item.price || "", // Ensure price is included
+            quantity: item.quantity || 1, // Default to 1 if quantity is missing
+          })),
+          {
+            price_data: {
+              currency: 'nzd', // Updated currency to NZD
+              product_data: {
+                name: 'Shipping Fee',
+              },
+              unit_amount: Math.round(shippingCost * 100), // Convert shipping cost to cents
+            },
+            quantity: 1,
+          },
+        ],
         mode: 'payment',
         success_url: `${process.env.NEXT_PUBLIC_SITE_URL}/success`,
         cancel_url: `${process.env.NEXT_PUBLIC_SITE_URL}/cancel`,

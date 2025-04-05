@@ -25,7 +25,7 @@ export async function POST(request: Request) {
 
     // Calculate subtotal to determine shipping
     const subtotal = items.reduce((total: number, item: any) => total + (item.price * item.quantity), 0);
-    const shipping = subtotal < 150 ? 5.00 : 0; // Free shipping over $150
+    const shipping = subtotal < 150 ? 10.00 : 0; // Free shipping over $150
 
     // Create line items for products
     const lineItems = items.map((item: any) => ({

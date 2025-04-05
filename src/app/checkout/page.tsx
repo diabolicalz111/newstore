@@ -24,6 +24,7 @@ export default function CheckoutPage() {
   }, []);
 
   const totalPrice = cart.reduce((total, item) => total + item.price * item.quantity, 0);
+  const shippingCost = totalPrice > 150 ? 0 : 10; // Free shipping for orders over $150
 
   const handleCheckout = async () => {
     const stripe = await stripePromise;
@@ -39,6 +40,7 @@ export default function CheckoutPage() {
             price: item.priceId || "", // Ensure priceId is included
             quantity: item.quantity,
           })),
+          shippingCost, // Include shipping cost in the request
         }),
       });
 

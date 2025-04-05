@@ -30,19 +30,36 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
+    // Ensure no discount banner is dynamically added
+    const discountBanner = document.querySelector(".discount-banner");
+    if (discountBanner) {
+        discountBanner.remove();
+    }
+
     // Removed code related to thumbnails
 
-    // Flash Sale: Apply 30% discount to all products
+    // Flash Sale: Apply 30% discount to products 200-209
     const products = document.querySelectorAll(".product");
+    console.log("Products found:", products); // Debugging
+
     products.forEach((product) => {
-        const originalPrice = parseFloat(product.dataset.price);
-        console.log(`Original Price: ${originalPrice}`); // Debugging
-        if (!isNaN(originalPrice)) {
-            const discountedPrice = (originalPrice * 0.7).toFixed(2); // Calculate 30% off
-            console.log(`Discounted Price: ${discountedPrice}`); // Debugging
-            product.querySelector(".discounted-price").textContent = discountedPrice;
-        } else {
-            console.error("Invalid price for product:", product);
+        const productId = product.id;
+        if (productId && /^product20[0-9]$/.test(productId)) { // Match IDs product200 to product209
+            const originalPrice = parseFloat(product.dataset.price);
+            console.log(`Original Price for ${productId}: ${originalPrice}`); // Debugging
+
+            if (!isNaN(originalPrice)) {
+                const discountedPrice = (originalPrice * 0.7).toFixed(2); // Calculate 30% off
+                console.log(`Discounted Price for ${productId}: ${discountedPrice}`); // Debugging
+                const discountedPriceElement = product.querySelector(".discounted-price");
+                if (discountedPriceElement) {
+                    discountedPriceElement.textContent = discountedPrice;
+                } else {
+                    console.error("Discounted price element not found for product:", productId);
+                }
+            } else {
+                console.error("Invalid price for product:", productId);
+            }
         }
     });
 });
