@@ -31,4 +31,16 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     // Removed code related to thumbnails
+
+    // Flash Sale: Apply 30% discount to all products
+    const products = document.querySelectorAll(".product");
+    products.forEach((product) => {
+        const originalPrice = parseFloat(product.dataset.price);
+        if (!isNaN(originalPrice)) {
+            const discountedPrice = (originalPrice * 0.7).toFixed(2); // Calculate 30% off
+            product.querySelector(".discounted-price").textContent = discountedPrice;
+        } else {
+            console.error("Invalid price for product:", product);
+        }
+    });
 });
