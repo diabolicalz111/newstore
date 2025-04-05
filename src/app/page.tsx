@@ -112,6 +112,7 @@ export default function Home() {
           View Policies
         </button>
       </section>
+      {/* Removed GitHub link */}
     </div>
   );
 }

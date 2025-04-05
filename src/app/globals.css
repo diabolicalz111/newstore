@@ -234,8 +234,8 @@
 .nav-right {
   display: flex;
   gap: 20px; /* Add spacing between right-aligned items */
-  margin-right: 8cm; /* Move the "Search" and "Cart" tabs 8 cm to the right */
-  transform: translateX(18cm); /* Move the "Search" and "Cart" tabs 18 cm to the right (14cm + 4cm) */
+  margin-right: calc(8cm - 0.1cm); /* Shift 0.1cm to the left */
+  transform: translateX(calc(18cm - 0.1cm)); /* Adjust translation by 0.1cm */
 }
 
 /* Title Container */
@@ -851,7 +851,7 @@
 .tabs-left {
   display: flex; /* Align tabs horizontally */
   gap: 20px; /* Add spacing between tabs */
-  margin-left: 1cm; /* Move the "Home" and "Shop" tabs 1 cm to the right */
+ 
 }
 
 .tabs-right {
@@ -2328,6 +2328,41 @@
   .cart-title {
     font-size: 2rem;
   }
+
+  .gold-products-title,
+  .silver-products-title,
+  .shop-all-products-title {
+    margin-top: calc(100px + 0.6cm); /* Add another 0.2cm to the existing margin */
+    text-align: center; /* Ensure titles are centered */
+  }
+
+  .nav-right {
+    margin-right: calc(8cm - 0.1cm); /* Shift 0.1cm to the left */
+    transform: translateX(calc(18cm - 0.1cm)); /* Adjust translation by 0.1cm */
+  }
+
+  .nav-left {
+    margin-left: calc(1cm - 0.2cm); /* Shift 0.2cm to the left */
+  }
+
+  .nav-right {
+    margin-right: calc(8cm - 0.2cm); /* Shift 0.2cm to the left */
+    transform: translateX(calc(18cm - 0.2cm)); /* Adjust translation by 0.2cm */
+  }
+
+  .nav-bar {
+    justify-content: center; /* Center the navigation tabs */
+  }
+
+  .nav-left,
+  .nav-right {
+    margin: 0; /* Remove any left or right margins */
+    transform: none; /* Reset any transformations */
+  }
+
+  .nav-bar ul {
+    justify-content: center; /* Ensure the tabs are centered within the bar */
+  }
 }
 
 /* General Mobile Styles */
@@ -2443,6 +2478,17 @@ body {
   .continue-shopping-btn {
     width: 100%; /* Full width buttons */
   }
+
+  .item-price {
+    margin-left: 2cm; /* Move the NZD amount 2cm to the right */
+  }
+
+  .gold-products-title,
+  .silver-products-title,
+  .shop-all-products-title {
+    margin-top: calc(100px + 0.6cm); /* Add another 0.2cm to the existing margin */
+    text-align: center; /* Ensure titles are centered */
+  }
 }
 
 .discount-banner {
@@ -2504,4 +2550,15 @@ button:hover {
 
 .policy p {
   line-height: 1.6; /* Improve readability */
+}
+
+footer a {
+  color: #007bff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+footer a:hover {
+  color: #0056b3;
+  text-decoration: underline;
 }
