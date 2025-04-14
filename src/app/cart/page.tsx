@@ -21,7 +21,7 @@ export default function CartPage() {
   const shipping = cartItems.length > 0 && subtotal < 150 ? 10.00 : 0; // Free shipping over $150
   const total = subtotal + shipping;
   const skuVariable = cartItems.map(item => item.id); // Extract SKUs from cart items
-  const categoryVariable = cartItems.map(item => "Uncategorized"); // Default all categories to &apos;Uncategorized&apos;
+  const categoryVariable = cartItems.map(() => "Uncategorized"); // Default all categories to 'Uncategorized'
 
   const handleCheckout = async () => {
     try {
