@@ -1,11 +1,6 @@
 "use client";
 
 import './globals.css';
-import { CartProvider } from './context/CartContext';
-import Script from 'next/script';
-import { Inter } from "next/font/google";
-
-const inter = Inter({ subsets: ["latin"] });
 
 export default function RootLayout({
   children,
@@ -24,9 +19,7 @@ export default function RootLayout({
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" />
       </head>
       <body>
-        <CartProvider>
-          {children}
-        </CartProvider>
+        {children}
       </body>
     </html>
   );
