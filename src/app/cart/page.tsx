@@ -5,7 +5,6 @@ import NavigationTabs from "../components/NavigationTabs";
 import Image from 'next/image';
 import { useCart } from '../context/CartContext';
 import { useRouter } from 'next/navigation';
-import stripePromise from '../../lib/stripe';
 import Link from 'next/link';
 
 const currencyVariable = "NZD"; // Default currency set to New Zealand Dollar
@@ -22,10 +21,6 @@ export default function CartPage() {
   const total = subtotal + shipping;
   const skuVariable = cartItems.map(item => item.id); // Extract SKUs from cart items
   const categoryVariable = cartItems.map(item => "Uncategorized"); // Default all categories to 'Uncategorized'
-
-  const handleContinueShopping = () => {
-    router.push('/');
-  };
 
   const handleCheckout = async () => {
     try {
