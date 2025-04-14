@@ -279,11 +279,11 @@ export default function ProductDetail({ params }: { params: Promise<{ id: string
             data-mpid="c55a7c48-bc47-4bfd-bc92-c3f22fea0794"
             data-placement-id="2b864adc-2249-4fe8-bb6f-9c3747f9228c"
             data-page-type="product"
-            data-amount={(product.price * 0.7).toFixed(2)}
+            data-amount={product.price * 0.7} // Pass as a number
             data-currency="NZD"
             data-consumer-locale="en-NZ"
-            data-item-skus={product.id.toString()}
-            data-item-categories="Uncategorized"
+            data-item-skus={[product.id.toString()]} // Pass as an array of strings
+            data-item-categories={["Uncategorized"]} // Pass as an array of strings
             data-is-eligible="true"
             className="mb-1"
           />
