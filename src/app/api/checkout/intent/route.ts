@@ -12,7 +12,13 @@ export async function POST(request: Request) {
     const body = await request.json();
     console.log("Request body:", JSON.stringify(body, null, 2));
 
-    const { items } = body;
+    // Define the expected structure of items
+    type Item = {
+      price: number;
+      quantity: number;
+    };
+
+    const { items }: { items: Item[] } = body;
 
     // Validate the items array
     if (!items || !Array.isArray(items) || items.length === 0) {
@@ -22,11 +28,15 @@ export async function POST(request: Request) {
 
     // Calculate total amount
     const amount = items.reduce((total: number, item: Record<string, unknown>) => {
-      if (!item.price || !item.quantity) {
-        console.error("Invalid item:", item);
-        throw new Error("Each item must have a price and quantity");
+      const price = Number(item.price);
+      const quantity = Number(item.quantity);
+
+      if (isNaN(price) || isNaN(quantity)) {
+        console.error("Invalid item price or quantity:", item);
+        throw new Error("Each item must have a valid price and quantity");
       }
-      return total + item.price * item.quantity;
+
+      return total + price * quantity;
     }, 0);
 
     console.log("Total amount (in cents):", Math.round(amount * 100));
