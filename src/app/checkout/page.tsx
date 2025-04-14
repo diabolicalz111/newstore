@@ -12,7 +12,6 @@ export default function CheckoutPage() {
   const { cartItems } = useCart(); // Access cart data
   const [clientSecret, setClientSecret] = useState<string | null>(null);
   const [fetchError, setFetchError] = useState<string | null>(null); // Track fetch errors
-  const [isSummaryVisible, setIsSummaryVisible] = useState(false);
 
   useEffect(() => {
     const fetchClientSecret = async () => {
