@@ -2,6 +2,7 @@
 
 import NavigationTabs from "../components/NavigationTabs";
 import Link from "next/link";
+import Image from "next/image";
 
 const silverProducts = [
   {
@@ -89,10 +90,12 @@ export default function SilverProducts() {
               key={product.id}
               className="silver-product"
             >
-              <img
+              <Image
                 src={`/images/${product.image}`}
                 alt={product.title}
                 className="silver-product-image silver-bulb-effect"
+                width={500}
+                height={500}
               />
               <h3 className="silver-product-title">{product.title}</h3>
               <p className="silver-product-description">{product.description}</p>

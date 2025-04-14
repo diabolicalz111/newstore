@@ -3,6 +3,7 @@
 import NavigationTabs from "../components/NavigationTabs";
 import Link from "next/link";
 import productsData from "../../data/products.json";
+import Image from "next/image";
 
 export default function ShopPage() {
   return (
@@ -19,7 +20,7 @@ export default function ShopPage() {
                 product.id >= 101 && product.id <= 109 ? "gold-product" : ""
               }`}
             >
-              <img
+              <Image
                 src={`/images/${product.image}`}
                 alt={product.title}
                 className={`silver-product-image ${
@@ -27,6 +28,8 @@ export default function ShopPage() {
                     ? "gold-product-image gold-bulb-effect"
                     : "silver-bulb-effect"
                 }`}
+                width={500}
+                height={500}
               />
               <h3
                 className={`silver-product-title ${

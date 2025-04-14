@@ -2,6 +2,7 @@
 
 import { useRouter } from "next/navigation";
 import NavigationTabs from "./components/NavigationTabs";
+import Image from "next/image";
 
 export default function Home() {
   const router = useRouter();
@@ -37,10 +38,12 @@ export default function Home() {
         <NavigationTabs />
 
         <header className="title-container">
-          <img
+          <Image
             src="/images/logo.png"
             alt="Diabolical Jewellery Logo"
             className="business-logo w-3/4 md:w-1/2" // Adjust width for mobile screens
+            width={500}
+            height={500}
           />
         </header>
       </section>
@@ -57,10 +60,12 @@ export default function Home() {
               GOLD VAULT
             </h3>
             <div className="vault-square gold-square mx-auto">
-              <img
+              <Image
                 src="/images/gold-vault.png"
                 alt="Gold Vault"
                 className="vault-image w-full"
+                width={500}
+                height={500}
               />
             </div>
           </div>
@@ -73,10 +78,12 @@ export default function Home() {
               SILVER VAULT
             </h3>
             <div className="vault-square silver-square mx-auto">
-              <img
+              <Image
                 src="/images/silver-vault.png"
                 alt="Silver Vault"
                 className="vault-image w-full"
+                width={500}
+                height={500}
               />
             </div>
           </div>
