@@ -106,10 +106,10 @@ export default function Home() {
           </p>
           <p className="text-base md:text-lg mb-4">
             Every piece is crafted to reflect ambition, strength, and individuality.
-            Because real style isn't about following trends—it's about setting them.
+            Because real style isn&apos;t about following trends—it&apos;s about setting them.
           </p>
           <p className="text-base md:text-lg">
-            When you wear Diabolical, you don't just shine—you own the moment.
+            When you wear Diabolical, you don&apos;t just shine—you own the moment.
           </p>
         </div>
         <button

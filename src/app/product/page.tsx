@@ -2,6 +2,7 @@
 
 import { useCart } from '../context/CartContext';
 import { useEffect, useState } from 'react';
+import Image from "next/image";
 
 interface Product {
   id: number;
@@ -59,7 +60,13 @@ export default function ProductPage() {
   return (
     <div className="product-page">
       <h1 className="text-3xl font-bold mb-6">{product.name}</h1>
-      <img src={product.image} alt={product.name} className="mb-4" />
+      <Image
+        src={product.image}
+        alt={product.name}
+        className="mb-4"
+        width={500}
+        height={500}
+      />
       <p className="text-xl mb-4">${product.price}</p>
       <square-placement
         data-mpid="c55a7c48-bc47-4bfd-bc92-c3f22fea0794"
