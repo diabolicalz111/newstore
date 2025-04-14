@@ -105,3 +105,20 @@ close-button:hover,
     font-weight: bold;
     display: inline; 
 } */
+
+/* Style for Afterpay messaging */
+.square-placement {
+    display: block;
+    margin-top: 10px; /* Add spacing below the discounted price */
+    text-align: left; /* Align text to the left */
+    font-size: 14px; /* Set a readable font size */
+    color: #333; /* Ensure text is visible */
+}
+
+.square-placement[data-is-eligible="true"] {
+    color: green; /* Highlight eligible messaging */
+}
+
+.square-placement[data-is-eligible="false"] {
+    color: red; /* Highlight ineligible messaging */
+}

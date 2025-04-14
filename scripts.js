@@ -38,13 +38,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Removed code related to thumbnails
 
-    // Flash Sale: Apply 30% discount to products 200-209
+    // Flash Sale: Apply 30% discount to products 200-209 and 101-109
     const products = document.querySelectorAll(".product");
     console.log("Products found:", products); // Debugging
 
     products.forEach((product) => {
         const productId = product.id;
-        if (productId && /^product20[0-9]$/.test(productId)) { // Match IDs product200 to product209
+        if (productId && (/^product20[0-9]$/.test(productId) || /^product10[1-9]$/.test(productId))) {
             const originalPrice = parseFloat(product.dataset.price);
             console.log(`Original Price for ${productId}: ${originalPrice}`); // Debugging
 

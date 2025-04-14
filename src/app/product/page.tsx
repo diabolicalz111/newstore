@@ -50,11 +50,28 @@ export default function ProductPage() {
     return <div>Loading...</div>;
   }
 
+  const priceVariable = product.price; // Use product price for the amount
+  const currencyVariable = "NZD"; // Default currency set to New Zealand Dollar
+  const localeVariable = "en-NZ"; // Default locale set to English - New Zealand
+  const skuVariable = product.id.toString(); // Use product ID as SKU
+  const categoryVariable = "Uncategorized"; // Default category
+
   return (
     <div className="product-page">
       <h1 className="text-3xl font-bold mb-6">{product.name}</h1>
       <img src={product.image} alt={product.name} className="mb-4" />
       <p className="text-xl mb-4">${product.price}</p>
+      <square-placement
+        data-mpid="c55a7c48-bc47-4bfd-bc92-c3f22fea0794"
+        data-placement-id="2b864adc-2249-4fe8-bb6f-9c3747f9228c"
+        data-page-type="product"
+        data-amount={priceVariable}
+        data-currency={currencyVariable}
+        data-consumer-locale={localeVariable}
+        data-item-skus={skuVariable}
+        data-item-categories={categoryVariable}
+        data-is-eligible="true"
+      />
       <button
         onClick={handleAddToCart}
         className="bg-yellow-500 text-black px-6 py-3 rounded-lg font-bold"

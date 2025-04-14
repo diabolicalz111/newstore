@@ -1,28 +1,20 @@
 import { NextResponse } from 'next/server';
 import Stripe from 'stripe';
 
-// Initialize Stripe with error handling
-let stripe: Stripe;
-try {
-  if (!process.env.STRIPE_SECRET_KEY) {
-    throw new Error('STRIPE_SECRET_KEY is not configured');
-  }
-  stripe = new Stripe(process.env.STRIPE_SECRET_KEY, {
-    apiVersion: '2023-10-16',
-  });
-} catch (error) {
-  console.error('Failed to initialize Stripe:', error);
-  throw error;
-}
+// Initialize Stripe
+const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!, {
+  apiVersion: '2023-10-16',
+});
 
 export async function POST(request: Request) {
-  console.log("API route '/api/checkout/intent' hit"); // Add this log
   try {
+    console.log("API route '/api/payment-intent' hit");
     const body = await request.json();
-    console.log("Request body:", JSON.stringify(body, null, 2)); // Pretty-print for better debugging
+    console.log("Request body:", JSON.stringify(body, null, 2));
 
     const { items } = body;
 
+    // Validate the items array
     if (!items || !Array.isArray(items) || items.length === 0) {
       console.error("Invalid items array:", items);
       return NextResponse.json({ error: "Invalid items array" }, { status: 400 });
@@ -50,7 +42,7 @@ export async function POST(request: Request) {
 
     return NextResponse.json({ clientSecret: paymentIntent.client_secret });
   } catch (error) {
-    console.error("Error in checkout API:", error);
+    console.error("Error in payment-intent API:", error);
     return NextResponse.json(
       { error: error instanceof Error ? error.message : "Internal Server Error" },
       { status: 500 }

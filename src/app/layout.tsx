@@ -2,6 +2,7 @@
 
 import './globals.css';
 import { CartProvider } from './context/CartContext';
+import Script from 'next/script';
 
 export default function RootLayout({
   children,
@@ -16,6 +17,10 @@ export default function RootLayout({
         <link
           href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap"
           rel="stylesheet"
+        />
+        <Script
+          src="https://js.squarecdn.com/square-marketplace.js"
+          strategy="lazyOnload"
         />
       </head>
       <body>

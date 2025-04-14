@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from 'react';
+import React, { useState, use } from 'react';
 import NavigationTabs from "../../components/NavigationTabs";
 import Image from 'next/image';
 import { useCart } from '../../context/CartContext';
@@ -189,13 +189,14 @@ const products: { [key: string]: Product } = {
   }
 };
 
-export default function ProductDetail({ params }: { params: { id: string } }) {
+export default function ProductDetail({ params }: { params: Promise<{ id: string }> }) {
   const { addToCart } = useCart();
   const [quantity, setQuantity] = useState(1);
-  const [productStock, setProductStock] = useState(products[params.id]?.stock || 0);
+  const unwrappedParams = use(params);
+  const [productStock, setProductStock] = useState(products[unwrappedParams.id]?.stock || 0);
 
-  const product = products[params.id] || {
-    id: parseInt(params.id),
+  const product = products[unwrappedParams.id] || {
+    id: parseInt(unwrappedParams.id),
     name: "Product Not Found",
     price: 0,
     description: "This product does not exist.",
@@ -252,10 +253,22 @@ export default function ProductDetail({ params }: { params: { id: string } }) {
             </span>
             <span className="tax-included text-sm">(Price includes tax)</span>
           </div>
-          <p className="discounted-price text-green-500 text-sm">
+          <p className="discounted-price text-green-500 text-sm mb-1">
             Discounted Price: NZD ${(product.price * 0.7).toFixed(2)}
           </p>
-          <p className="product-detail-description text-base md:text-lg">
+          <square-placement
+            data-mpid="c55a7c48-bc47-4bfd-bc92-c3f22fea0794"
+            data-placement-id="2b864adc-2249-4fe8-bb6f-9c3747f9228c"
+            data-page-type="product"
+            data-amount={(product.price * 0.7).toFixed(2)}
+            data-currency="NZD"
+            data-consumer-locale="en-NZ"
+            data-item-skus={product.id.toString()}
+            data-item-categories="Uncategorized"
+            data-is-eligible="true"
+            className="mb-1"
+          />
+          <p className="product-detail-description text-base md:text-lg mb-2">
             {product.description}
           </p>
           <div className="stock-info text-sm md:text-base">
