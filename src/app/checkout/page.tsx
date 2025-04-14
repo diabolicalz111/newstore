@@ -14,10 +14,6 @@ export default function CheckoutPage() {
   const [fetchError, setFetchError] = useState<string | null>(null); // Track fetch errors
   const [isSummaryVisible, setIsSummaryVisible] = useState(false);
 
-  const toggleSummaryVisibility = () => {
-    setIsSummaryVisible(!isSummaryVisible);
-  };
-
   useEffect(() => {
     const fetchClientSecret = async () => {
       try {
