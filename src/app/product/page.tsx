@@ -75,8 +75,8 @@ export default function ProductPage() {
         data-amount={priceVariable}
         data-currency={currencyVariable}
         data-consumer-locale={localeVariable}
-        data-item-skus={skuVariable}
-        data-item-categories={categoryVariable}
+        data-item-skus={[skuVariable]} // Pass as an array of strings
+        data-item-categories={[categoryVariable]} // Pass as an array of strings
         data-is-eligible="true"
       />
       <button
