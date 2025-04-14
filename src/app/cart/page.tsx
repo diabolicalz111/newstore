@@ -393,20 +393,25 @@ export default function CartPage() {
   );
 }
 
+// Replace the namespace declaration with ES2015 module syntax
+// Declare the custom JSX element type in a separate file or directly in the module
+export interface SquarePlacementProps extends React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement> {
+  'data-mpid'?: string;
+  'data-placement-id'?: string;
+  'data-page-type'?: string;
+  'data-amount'?: number;
+  'data-currency'?: string;
+  'data-consumer-locale'?: string;
+  'data-item-skus'?: string[];
+  'data-item-categories'?: string[];
+  'data-is-eligible'?: string;
+}
+
+// Extend JSX.IntrinsicElements directly
 declare global {
   namespace JSX {
     interface IntrinsicElements {
-      'square-placement': React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement> & {
-        'data-mpid'?: string;
-        'data-placement-id'?: string;
-        'data-page-type'?: string;
-        'data-amount'?: number;
-        'data-currency'?: string;
-        'data-consumer-locale'?: string;
-        'data-item-skus'?: string[];
-        'data-item-categories'?: string[];
-        'data-is-eligible'?: string;
-      };
+      'square-placement': SquarePlacementProps;
     }
   }
 }
