@@ -22,12 +22,8 @@ export default function RootLayout({
           rel="stylesheet"
         />
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" />
-        <Script
-          src="https://js.squarecdn.com/square-marketplace.js"
-          strategy="lazyOnload"
-        />
       </head>
-      <body className={inter.className}>
+      <body>
         <CartProvider>
           {children}
         </CartProvider>

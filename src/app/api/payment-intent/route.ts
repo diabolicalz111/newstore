@@ -21,7 +21,7 @@ export async function POST(request: Request) {
     }
 
     // Calculate total amount
-    const amount = items.reduce((total: number, item: any) => {
+    const amount = items.reduce((total: number, item: { price: number; quantity: number }) => {
       if (!item.price || !item.quantity) {
         console.error("Invalid item:", item);
         throw new Error("Each item must have a price and quantity");

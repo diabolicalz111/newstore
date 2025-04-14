@@ -18,7 +18,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
       console.log("Received items:", items);
 
-      const amount = items.reduce((total: number, item: any) => {
+      const amount = items.reduce((total: number, item: { price: number; quantity: number }) => {
         if (!item.price || !item.quantity) {
           console.error("Invalid item:", item);
           throw new Error("Each item must have a price and quantity");

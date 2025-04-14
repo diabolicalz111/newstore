@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { loadStripe } from "@stripe/stripe-js";
 import { Elements, PaymentElement, AddressElement, useElements, useStripe } from "@stripe/react-stripe-js";
 import { useCart } from '../context/CartContext'; // Import the useCart hook
+import Image from "next/image";
 
 const stripePromise = loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY!);
 
@@ -98,10 +99,12 @@ export default function CheckoutPage() {
                 {cartItems.map((item) => (
                   <li key={item.id} className="flex items-center justify-between">
                     <div className="flex items-center">
-                      <img
+                      <Image
                         src={item.image}
                         alt={item.name}
                         className="w-20 h-20 object-cover rounded-md mr-4 border border-gray-300"
+                        width={80}
+                        height={80}
                       />
                       <div>
                         <h3 className="font-semibold text-lg text-gray-800">{item.name}</h3>
