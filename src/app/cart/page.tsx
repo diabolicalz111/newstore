@@ -6,6 +6,7 @@ import Image from 'next/image';
 import { useCart } from '../context/CartContext';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
+import { AfterpayClearpayMessageElement } from '@stripe/react-stripe-js';
 
 const currencyVariable = "NZD"; // Default currency set to New Zealand Dollar
 const localeVariable = "en-NZ"; // Default locale set to English - New Zealand
@@ -20,7 +21,7 @@ export default function CartPage() {
   const shipping = cartItems.length > 0 && subtotal < 150 ? 10.00 : 0; // Free shipping over $150
   const total = subtotal + shipping;
   const skuVariable = cartItems.map(item => item.id); // Extract SKUs from cart items
-  const categoryVariable = cartItems.map(item => "Uncategorized"); // Default all categories to 'Uncategorized'
+  const categoryVariable = cartItems.map(item => "Uncategorized"); // Default all categories to &apos;Uncategorized&apos;
 
   const handleCheckout = async () => {
     try {
@@ -281,6 +282,18 @@ export default function CartPage() {
             background: #666 !important;
           }
 
+          .afterpay-message {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #2a2a2a;
+            border: 1px solid #444;
+            border-radius: 8px;
+            text-align: center;
+            color: #f5f5f5;
+            font-size: 0.9rem;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+          }
+
           @media (max-width: 768px) {
             .cart-container {
               grid-template-columns: 1fr;
@@ -290,7 +303,7 @@ export default function CartPage() {
 
         <div className="cart-container">
           <div className="cart-items">
-            {cartItems.map(() => (
+            {cartItems.map((item) => (
               <div key={item.id} className="cart-item">
                 <Image
                   src={item.image}
@@ -355,6 +368,14 @@ export default function CartPage() {
               data-item-categories={categoryVariable}
               data-is-eligible="true"
             />
+            <div className="afterpay-message">
+              <AfterpayClearpayMessageElement
+                options={{
+                  amount: total * 100, // Convert to cents for Stripe
+                  currency: 'NZD',
+                }}
+              />
+            </div>
             <button 
               className="checkout-btn"
               onClick={handleCheckout}

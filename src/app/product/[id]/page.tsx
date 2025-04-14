@@ -4,6 +4,7 @@ import React, { useState, use } from 'react';
 import NavigationTabs from "../../components/NavigationTabs";
 import Image from 'next/image';
 import { useCart } from '../../context/CartContext';
+import { AfterpayClearpayMessageElement } from '@stripe/react-stripe-js';
 
 interface Product {
   id: number;
@@ -256,6 +257,24 @@ export default function ProductDetail({ params }: { params: Promise<{ id: string
           <p className="discounted-price text-green-500 text-sm mb-1">
             Discounted Price: NZD ${(product.price * 0.7).toFixed(2)}
           </p>
+          <div className="afterpay-message" style={{ 
+            marginTop: '10px', 
+            padding: '10px', 
+            backgroundColor: '#2a2a2a', 
+            border: '1px solid #444', 
+            borderRadius: '8px', 
+            textAlign: 'center', 
+            color: '#f5f5f5', 
+            fontSize: '0.9rem', 
+            boxShadow: '0 1px 3px rgba(0, 0, 0, 0.1)'
+          }}>
+            <AfterpayClearpayMessageElement
+              options={{
+                amount: (product.price * 0.7) * 100, // Convert to cents for Stripe
+                currency: 'NZD',
+              }}
+            />
+          </div>
           <square-placement
             data-mpid="c55a7c48-bc47-4bfd-bc92-c3f22fea0794"
             data-placement-id="2b864adc-2249-4fe8-bb6f-9c3747f9228c"
