@@ -2,6 +2,7 @@
 
 import NavigationTabs from "../components/NavigationTabs";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function GoldProducts() {
   const goldProducts = [
@@ -84,10 +85,12 @@ export default function GoldProducts() {
               key={product.id}
               className="silver-product"
             >
-              <img
+              <Image
                 src={`/images/${product.image}`}
                 alt={product.title}
                 className="silver-product-image gold-bulb-effect"
+                width={500}
+                height={500}
               />
               <h3 className="silver-product-title gold-gradient">
                 {product.title.toUpperCase()}
