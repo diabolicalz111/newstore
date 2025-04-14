@@ -111,6 +111,7 @@ export default function Home() {
           <p className="text-base md:text-lg">
             When you wear Diabolical, you don&apos;t just shine—you own the moment.
           </p>
+          <p>It&apos;s a great day to shop for precious metals!</p>
         </div>
         <button
           onClick={() => window.location.href = "/policies"}
