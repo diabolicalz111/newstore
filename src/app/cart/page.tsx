@@ -290,7 +290,7 @@ export default function CartPage() {
 
         <div className="cart-container">
           <div className="cart-items">
-            {cartItems.map((item) => (
+            {cartItems.map(() => (
               <div key={item.id} className="cart-item">
                 <Image
                   src={item.image}
