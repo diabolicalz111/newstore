@@ -32,7 +32,7 @@ export async function POST(request: Request) {
     console.log("Total amount (in cents):", Math.round(amount * 100));
 
     // Include product details in metadata
-    const metadata = items.reduce((acc: any, item: { name: string; quantity: number }) => {
+    const metadata = items.reduce((acc: Record<string, string>, item: { name: string; quantity: number }) => {
       acc[`product_${item.name}`] = `Quantity: ${item.quantity}`;
       return acc;
     }, {});
