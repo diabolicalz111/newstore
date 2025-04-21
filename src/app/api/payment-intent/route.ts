@@ -31,11 +31,22 @@ export async function POST(request: Request) {
 
     console.log("Total amount (in cents):", Math.round(amount * 100));
 
-    // Create a PaymentIntent
+    // Include product details in metadata
+    const metadata = items.reduce((acc: any, item: { name: string; quantity: number }) => {
+      acc[`product_${item.name}`] = `Quantity: ${item.quantity}`;
+      return acc;
+    }, {});
+
+    // Add a flat shipping cost
+    const shippingCost = 1000; // Flat shipping cost in cents
+    const totalAmount = Math.round(amount * 100) + shippingCost; // Add shipping cost to total amount
+
+    // Create a PaymentIntent with metadata and updated amount
     const paymentIntent = await stripe.paymentIntents.create({
-      amount: Math.round(amount * 100), // Convert to cents
+      amount: totalAmount, // Include shipping cost
       currency: "nzd",
       automatic_payment_methods: { enabled: true },
+      metadata, // Add metadata here
     });
 
     console.log("PaymentIntent created successfully:", paymentIntent.id);

@@ -17,6 +17,14 @@ export default function CheckoutPage() {
     const fetchClientSecret = async () => {
       try {
         console.log("Fetching client secret from /api/payment-intent...");
+
+        // Validate cartItems before sending
+        if (!cartItems || cartItems.length === 0) {
+          console.error("Cart is empty or invalid.");
+          setFetchError("Your cart is empty. Please add items to proceed.");
+          return;
+        }
+
         const response = await fetch("/api/payment-intent", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
@@ -208,14 +216,6 @@ export default function CheckoutPage() {
           font-weight: bold;
           margin-bottom: 1rem;
           color: #111;
-        }
-
-        .order-summary ul {
-          list-style: none;
-          padding: 0;
-          margin: 0;
-        }
-
         .order-summary li {
           display: flex;
           align-items: center;
