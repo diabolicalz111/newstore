@@ -217,7 +217,7 @@ export default function ProductDetail({ params }: { params: Promise<{ id: string
       addToCart({
         id: product.id,
         name: product.name,
-        price: product.price * 0.7, // Use discounted price
+        price: product.price * 0.4, // Use discounted price (60% off)
         image: product.image,
         quantity: quantity,
         priceId: product.priceId || "",
@@ -255,7 +255,7 @@ export default function ProductDetail({ params }: { params: Promise<{ id: string
             <span className="tax-included text-sm">(Price includes tax)</span>
           </div>
           <p className="discounted-price text-green-500 text-sm mb-1">
-            Discounted Price: NZD ${(product.price * 0.7).toFixed(2)}
+            Discounted Price: NZD ${(product.price * 0.4).toFixed(2)}
           </p>
           <div className="afterpay-message" style={{ 
             marginTop: '10px', 
@@ -270,7 +270,7 @@ export default function ProductDetail({ params }: { params: Promise<{ id: string
           }}>
             <AfterpayClearpayMessageElement
               options={{
-                amount: (product.price * 0.7) * 100, // Convert to cents for Stripe
+                amount: (product.price * 0.4) * 100, // Convert to cents for Stripe
                 currency: 'NZD',
               }}
             />
@@ -279,7 +279,7 @@ export default function ProductDetail({ params }: { params: Promise<{ id: string
             data-mpid="c55a7c48-bc47-4bfd-bc92-c3f22fea0794"
             data-placement-id="2b864adc-2249-4fe8-bb6f-9c3747f9228c"
             data-page-type="product"
-            data-amount={product.price * 0.7} // Pass as a number
+            data-amount={product.price * 0.4} // Pass as a number
             data-currency="NZD"
             data-consumer-locale="en-NZ"
             data-item-skus={[product.id.toString()]} // Pass as an array of strings

@@ -20,7 +20,7 @@ export default function Home() {
       {/* Free Shipping Banner */}
       <div className="free-shipping-banner">
         <span className="scrolling-text">
-          Everything 30% off and Free Shipping Over $150
+          Everything 60% off and Free Shipping Over $150
         </span>
       </div>
 

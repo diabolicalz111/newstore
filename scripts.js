@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Removed code related to thumbnails
 
-    // Flash Sale: Apply 30% discount to products 200-209 and 101-109
+    // Flash Sale: Apply 60% discount to products 200-209 and 101-109
     const products = document.querySelectorAll(".product");
     console.log("Products found:", products); // Debugging
 
@@ -49,7 +49,7 @@ document.addEventListener("DOMContentLoaded", () => {
             console.log(`Original Price for ${productId}: ${originalPrice}`); // Debugging
 
             if (!isNaN(originalPrice)) {
-                const discountedPrice = (originalPrice * 0.7).toFixed(2); // Calculate 30% off
+                const discountedPrice = (originalPrice * 0.4).toFixed(2); // Calculate 60% off
                 console.log(`Discounted Price for ${productId}: ${discountedPrice}`); // Debugging
                 const discountedPriceElement = product.querySelector(".discounted-price");
                 if (discountedPriceElement) {
